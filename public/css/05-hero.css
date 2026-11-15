@@ -180,10 +180,10 @@
 }
 
 .vehicle {
-  --body: #3b4449;
-  --body-shade: #2a3236;
-  --glass: #b7cbd1;
-  --glass-shade: #8ea3ab;
+  --body: #b7bbb8;
+  --body-shade: #969b98;
+  --glass: #6f8189;
+  --glass-shade: #333c40;
   --trim: #1b2023;
   --rim: #d3d8da;
   width: 100%;
