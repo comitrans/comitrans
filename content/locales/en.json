@@ -1,0 +1,298 @@
+{
+  "meta": {
+    "title": "Novi Sad airport transfers | Ćomitrans",
+    "description": "Private transfers from Novi Sad to Belgrade, Budapest, Timișoara, Osijek and Zagreb airports. A Ford Galaxy for up to six passengers, from your door to the terminal.",
+    "ogTitle": "Ćomitrans: from your door to the airport",
+    "ogAlt": "Ćomitrans, airport transfers from Novi Sad: a green road sign for Belgrade Airport above a car on the road."
+  },
+  "anchors": {
+    "airport": "airport",
+    "routes": "routes",
+    "rides": "rides",
+    "vehicle": "vehicle",
+    "about": "about",
+    "faq": "questions",
+    "booking": "booking"
+  },
+  "chrome": {
+    "skip": "Skip to content",
+    "home": "Ćomitrans, top of the page",
+    "nav": "Page sections",
+    "menu": {
+      "airport": "Airport",
+      "routes": "Routes",
+      "rides": "Other rides",
+      "vehicle": "Vehicle",
+      "faq": "Questions"
+    },
+    "book": "Book a ride",
+    "language": "Language",
+    "preview": "Preview: the details on this page are not confirmed yet.",
+    "dock": {
+      "label": "Quick contact",
+      "call": "Call",
+      "whatsapp": "WhatsApp",
+      "viber": "Viber"
+    },
+    "hint": {
+      "text": "This page is also available in English.",
+      "action": "Switch to English",
+      "dismiss": "Close"
+    }
+  },
+  "places": {
+    "novi-sad": "Novi Sad",
+    "kovilj": "Kovilj",
+    "beska": "Beška",
+    "indjija": "Inđija",
+    "stara-pazova": "Stara Pazova",
+    "batajnica": "Batajnica",
+    "airport": "Airport"
+  },
+  "units": {
+    "km": "km",
+    "hour": "h",
+    "minute": "min",
+    "about": "about"
+  },
+  "hero": {
+    "title": "From your door to the airport.",
+    "lead": "Private transfers from Novi Sad to the airport and back. I'm Ćomi, I do the driving, and the Ford Galaxy seats up to six.",
+    "call": "or call",
+    "also": "I also drive to Budapest, Timișoara, Osijek and Zagreb airports.",
+    "alsoLink": "All routes",
+    "sign": {
+      "cyrillic": "Аеродром Београд",
+      "latin": "Belgrade Airport"
+    }
+  },
+  "airport": {
+    "title": "Airport transfers",
+    "lead": "One message is enough. You tell me when and where from, I reply with the price and the pickup time.",
+    "direction": "Direction",
+    "home": "Your address",
+    "terminal": "Airport",
+    "to": {
+      "tab": "To the airport",
+      "steps": [
+        {
+          "title": "Send the details",
+          "text": "Date, flight time, address and number of passengers. A call, WhatsApp or Viber all work."
+        },
+        {
+          "title": "Get a confirmation",
+          "text": "I reply with the price and the pickup time, allowing for traffic and check-in."
+        },
+        {
+          "title": "I pick you up",
+          "text": "At your address, at the agreed time. Luggage goes in the boot, you take your seat."
+        },
+        {
+          "title": "You arrive at the terminal",
+          "text": "I drop you at the departures entrance."
+        }
+      ]
+    },
+    "from": {
+      "tab": "From the airport",
+      "steps": [
+        {
+          "title": "Send your flight number",
+          "text": "Along with the date, the address and the number of passengers."
+        },
+        {
+          "title": "I follow your flight",
+          "text": "I time the pickup to the actual landing, so a late plane is not your problem."
+        },
+        {
+          "title": "I wait at arrivals",
+          "text": "Message me once you have your bags and we meet outside the exit."
+        },
+        {
+          "title": "I drive you to your door",
+          "text": "To your address in Novi Sad or nearby."
+        }
+      ]
+    }
+  },
+  "routes": {
+    "title": "Airports I drive to",
+    "lead": "Pickup is at your address in Novi Sad or nearby. Distances and times are approximate. For airports abroad, allow for the border crossing too.",
+    "airports": {
+      "beg": { "city": "Belgrade", "airport": "Nikola Tesla" },
+      "osi": { "city": "Osijek", "airport": "Klisa" },
+      "tsr": { "city": "Timișoara", "airport": "Traian Vuia" },
+      "bud": { "city": "Budapest", "airport": "Ferenc Liszt" },
+      "zag": { "city": "Zagreb", "airport": "Franjo Tuđman" }
+    },
+    "border": "plus the border",
+    "onRequest": "price on request",
+    "from": "from",
+    "other": "Your route is not on the board?",
+    "otherAction": "Tell me where from and where to"
+  },
+  "rides": {
+    "title": "Not just airports",
+    "lead": "Same car, same driver, other routes.",
+    "items": {
+      "intercity": {
+        "sign": "Belgrade, Zagreb, Vienna",
+        "title": "Intercity and cross-border rides",
+        "text": "Address to address, with no changes and no waiting at stations. We cross the border together."
+      },
+      "events": {
+        "sign": "Weddings, concerts, parties",
+        "title": "Events and nights out",
+        "text": "I take you to the wedding, concert or party and bring you home when it ends, so nobody in the group has to drive."
+      },
+      "trips": {
+        "sign": "Fruška Gora, wineries, spas",
+        "title": "Day trips",
+        "text": "A day on Fruška Gora, a round of wineries or a visit to a spa. I wait until you are ready to head back."
+      },
+      "cargo": {
+        "sign": "Parcels, documents, shopping",
+        "title": "Small cargo",
+        "text": "A parcel, documents or anything that fits in the Galaxy with the seats folded. It is not a van, but it holds more than you would think."
+      }
+    }
+  },
+  "vehicle": {
+    "title": "Ford Galaxy: seven seats, six of them yours",
+    "lead": "One seat is mine, the other six are yours. Pick how many of you are travelling and see where you sit.",
+    "passengers": "Passengers",
+    "fewer": "One passenger fewer",
+    "more": "One more passenger",
+    "status": "Passengers: {count}",
+    "roomy": "Up to four passengers: the third row is folded, so the boot is large.",
+    "full": "Five or six: the third row is in use, so the boot is smaller. Tell me how many suitcases you are bringing.",
+    "driver": "Ćomi",
+    "boot": "Boot",
+    "map": "Seat layout of the vehicle"
+  },
+  "about": {
+    "title": "I'm Ćomi.",
+    "text": [
+      "Ćomitrans is me and my Galaxy. When you book a ride, I answer, I turn up and I drive.",
+      "No dispatcher and no surprises: you know who is waiting for you and in which car."
+    ],
+    "plate": "A licence plate reading NS ĆOMI"
+  },
+  "faq": {
+    "title": "Questions and answers",
+    "items": [
+      {
+        "q": "How do I book a ride?",
+        "a": "Call, or message me on WhatsApp or Viber. The quickest way is the form at the bottom of this page: fill in the details and the message writes itself."
+      },
+      {
+        "q": "How far ahead should I book?",
+        "a": "The earlier the better, especially for early morning flights and weekends. Do get in touch at the last minute too: if I am free, I drive."
+      },
+      {
+        "q": "What if my flight is late?",
+        "a": "Send me your flight number. I follow the landing time and arrive when the plane actually lands."
+      },
+      {
+        "q": "How much luggage fits?",
+        "a": "It depends on how many of you there are. With up to four passengers the boot is large. With five or six it holds less, so tell me in advance how many suitcases you are bringing."
+      },
+      {
+        "q": "How do I pay?",
+        "a": "We agree the price before the ride, so there are no surprises at the end."
+      },
+      {
+        "q": "Do you drive at night and on holidays?",
+        "a": "Yes. Flights do not keep office hours, and neither do I."
+      },
+      {
+        "q": "Do you drive to other cities and airports?",
+        "a": "Yes. If your route is not listed, tell me where from and where to and I will reply with a price."
+      }
+    ]
+  },
+  "booking": {
+    "title": "Book a ride",
+    "lead": "Fill in what you know. The message writes itself as you type, and you choose how to send it.",
+    "fields": {
+      "route": "Route",
+      "other": "Another route",
+      "direction": "Direction",
+      "to": "To the airport",
+      "from": "From the airport",
+      "date": "Date",
+      "time": "Time",
+      "timeHint": "Flight time or preferred pickup",
+      "address": "Address",
+      "addressHint": "Street and number, town",
+      "destination": "Destination",
+      "passengers": "Passengers",
+      "luggage": "Suitcases",
+      "fewer": "Fewer",
+      "more": "More",
+      "flight": "Flight number",
+      "name": "Name",
+      "note": "Note",
+      "optional": "optional"
+    },
+    "preview": "Your message",
+    "send": {
+      "whatsapp": "Send on WhatsApp",
+      "viber": "Send on Viber",
+      "email": "Send by email",
+      "copy": "Copy the message",
+      "call": "or call"
+    },
+    "status": {
+      "copied": "Message copied.",
+      "viber": "Message copied. If it does not appear in Viber, paste it in."
+    },
+    "privacy": "Nothing you type is sent from this page. The message is put together on your device and you send it yourself.",
+    "noscript": "The form needs JavaScript. You can call or write directly:",
+    "message": {
+      "greeting": "Hello Ćomi, I would like to book a ride.",
+      "subject": "Ride",
+      "base": "Novi Sad",
+      "airport": "Airport",
+      "route": "Route",
+      "when": "Date and time",
+      "date": "{d} {month} {y}",
+      "at": "at",
+      "address": "Address",
+      "destination": "Destination",
+      "passengers": "Passengers",
+      "luggage": "Suitcases",
+      "flight": "Flight number",
+      "name": "Name",
+      "note": "Note",
+      "months": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ]
+    }
+  },
+  "footer": {
+    "closing": "Have a good trip!",
+    "contact": "Contact",
+    "languages": "Language",
+    "privacy": "No cookies and no tracking. This site collects no data.",
+    "rights": "© Ćomitrans, Novi Sad",
+    "top": "Back to the top"
+  },
+  "notFound": {
+    "metaTitle": "Page not found | Ćomitrans",
+    "title": "Dead end.",
+    "text": "There is no page at this address. Head back to the start.",
+    "home": "Home page"
+  }
+}

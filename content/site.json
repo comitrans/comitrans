@@ -1,0 +1,73 @@
+{
+  "brand": "Ćomitrans",
+  "origin": "https://comitrans.net",
+  "launched": false,
+  "todo": [
+    "contact: the phone, WhatsApp and Viber numbers are placeholders",
+    "contact: set up forwarding for the info@ address",
+    "routes: confirm distances and usual door-to-door times; add prices or keep them on request",
+    "airport: confirm the routine the steps describe (following flights, waiting at arrivals)",
+    "faq: confirm every answer (notice needed, nights and holidays, payment)",
+    "vehicle: confirm the seat and luggage notes",
+    "copy: have the Serbian text proofread by a native speaker",
+    "booking: test the Viber button on a real phone",
+    "footer: add the registered business details if they are required"
+  ],
+  "locales": [
+    {
+      "code": "sr",
+      "lang": "sr-Latn",
+      "hreflang": "sr",
+      "path": "",
+      "label": "SR",
+      "name": "Srpski",
+      "ogLocale": "sr_RS",
+      "phone": "national"
+    },
+    {
+      "code": "en",
+      "lang": "en",
+      "hreflang": "en",
+      "path": "en/",
+      "label": "EN",
+      "name": "English",
+      "ogLocale": "en_GB",
+      "phone": "international"
+    }
+  ],
+  "fallbackLocale": "en",
+  "base": { "code": "NS" },
+  "contact": {
+    "phone": {
+      "e164": "+381600000000",
+      "national": "060 000 0000",
+      "international": "+381 60 000 0000"
+    },
+    "whatsapp": "+381600000000",
+    "viber": "+381600000000",
+    "email": { "user": "info", "domain": "comitrans.net" }
+  },
+  "business": null,
+  "vehicle": { "make": "Ford", "model": "Galaxy", "passengers": 6, "roomyUpTo": 4, "luggageMax": 8 },
+  "heroPhoto": null,
+  "routes": [
+    { "id": "beg", "code": "BEG", "km": 80, "minutes": 60, "border": false, "price": null },
+    { "id": "osi", "code": "OSI", "km": 100, "minutes": 105, "border": true, "price": null },
+    { "id": "tsr", "code": "TSR", "km": 160, "minutes": 150, "border": true, "price": null },
+    { "id": "bud", "code": "BUD", "km": 290, "minutes": 180, "border": true, "price": null },
+    { "id": "zag", "code": "ZAG", "km": 360, "minutes": 225, "border": true, "price": null }
+  ],
+  "currency": "RSD",
+  "trip": {
+    "route": "beg",
+    "stops": [
+      { "id": "novi-sad", "km": 0 },
+      { "id": "kovilj", "km": 15 },
+      { "id": "beska", "km": 32 },
+      { "id": "indjija", "km": 42 },
+      { "id": "stara-pazova", "km": 52 },
+      { "id": "batajnica", "km": 63 },
+      { "id": "airport", "km": 80 }
+    ]
+  }
+}

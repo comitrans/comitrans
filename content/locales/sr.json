@@ -1,0 +1,298 @@
+{
+  "meta": {
+    "title": "Prevoz do aerodroma iz Novog Sada | Ćomitrans",
+    "description": "Privatni prevoz iz Novog Sada do aerodroma u Beogradu, Budimpešti, Temišvaru, Osijeku i Zagrebu. Ford Galaxy, do šest putnika, od vaših vrata do terminala.",
+    "ogTitle": "Ćomitrans: od vrata do aerodroma",
+    "ogAlt": "Ćomitrans, prevoz do aerodroma iz Novog Sada: zeleni putokaz za aerodrom Beograd iznad vozila na putu."
+  },
+  "anchors": {
+    "airport": "aerodrom",
+    "routes": "relacije",
+    "rides": "voznje",
+    "vehicle": "vozilo",
+    "about": "comi",
+    "faq": "pitanja",
+    "booking": "zakazivanje"
+  },
+  "chrome": {
+    "skip": "Preskočite na sadržaj",
+    "home": "Ćomitrans, početak strane",
+    "nav": "Delovi strane",
+    "menu": {
+      "airport": "Aerodrom",
+      "routes": "Relacije",
+      "rides": "Ostale vožnje",
+      "vehicle": "Vozilo",
+      "faq": "Pitanja"
+    },
+    "book": "Zakažite vožnju",
+    "language": "Jezik",
+    "preview": "Pregled: podaci na ovoj strani još nisu potvrđeni.",
+    "dock": {
+      "label": "Brzi kontakt",
+      "call": "Poziv",
+      "whatsapp": "WhatsApp",
+      "viber": "Viber"
+    },
+    "hint": {
+      "text": "Ova strana postoji i na srpskom.",
+      "action": "Pređite na srpski",
+      "dismiss": "Zatvori"
+    }
+  },
+  "places": {
+    "novi-sad": "Novi Sad",
+    "kovilj": "Kovilj",
+    "beska": "Beška",
+    "indjija": "Inđija",
+    "stara-pazova": "Stara Pazova",
+    "batajnica": "Batajnica",
+    "airport": "Aerodrom"
+  },
+  "units": {
+    "km": "km",
+    "hour": "h",
+    "minute": "min",
+    "about": "oko"
+  },
+  "hero": {
+    "title": "Od vrata do aerodroma.",
+    "lead": "Privatni prevoz iz Novog Sada do aerodroma i nazad. Vozim vas ja, Ćomi, a u Ford Galaxy staje do šest putnika.",
+    "call": "ili pozovite",
+    "also": "Vozim i do aerodroma u Budimpešti, Temišvaru, Osijeku i Zagrebu.",
+    "alsoLink": "Sve relacije",
+    "sign": {
+      "cyrillic": "Аеродром Београд",
+      "latin": "Aerodrom Beograd"
+    }
+  },
+  "airport": {
+    "title": "Aerodromski transfer",
+    "lead": "Jedna poruka je dovoljna. Vi pošaljete kada i odakle, ja javim cenu i vreme polaska.",
+    "direction": "Smer vožnje",
+    "home": "Vaša adresa",
+    "terminal": "Aerodrom",
+    "to": {
+      "tab": "Na aerodrom",
+      "steps": [
+        {
+          "title": "Pošaljite detalje",
+          "text": "Datum, vreme leta, adresu i broj putnika. Može poziv, WhatsApp ili Viber."
+        },
+        {
+          "title": "Dobijate potvrdu",
+          "text": "Javljam cenu i vreme polaska, računajući gužvu i vreme za prijavu na let."
+        },
+        {
+          "title": "Dolazim po vas",
+          "text": "Na adresu, u dogovoreno vreme. Prtljag ide u prtljažnik, vi na svoje mesto."
+        },
+        {
+          "title": "Stižete na terminal",
+          "text": "Vozim vas do ulaza u terminal za polaske."
+        }
+      ]
+    },
+    "from": {
+      "tab": "Sa aerodroma",
+      "steps": [
+        {
+          "title": "Pošaljite broj leta",
+          "text": "Uz datum, adresu i broj putnika."
+        },
+        {
+          "title": "Pratim vaš let",
+          "text": "Polazak prilagođavam sletanju, pa ne brinete ako avion kasni."
+        },
+        {
+          "title": "Čekam vas na dolascima",
+          "text": "Javite se kad preuzmete prtljag i nalazimo se ispred izlaza."
+        },
+        {
+          "title": "Vozim vas do vrata",
+          "text": "Do adrese u Novom Sadu ili okolini."
+        }
+      ]
+    }
+  },
+  "routes": {
+    "title": "Aerodromi do kojih vozim",
+    "lead": "Polazim sa vaše adrese u Novom Sadu ili okolini. Kilometri i vreme su okvirni. Za aerodrome u inostranstvu računajte i prelazak granice.",
+    "airports": {
+      "beg": { "city": "Beograd", "airport": "Nikola Tesla" },
+      "osi": { "city": "Osijek", "airport": "Klisa" },
+      "tsr": { "city": "Temišvar", "airport": "Traian Vuia" },
+      "bud": { "city": "Budimpešta", "airport": "Ferenc Liszt" },
+      "zag": { "city": "Zagreb", "airport": "Franjo Tuđman" }
+    },
+    "border": "plus granica",
+    "onRequest": "cena po dogovoru",
+    "from": "od",
+    "other": "Vaše relacije nema na tabli?",
+    "otherAction": "Javite odakle i dokle"
+  },
+  "rides": {
+    "title": "Ne vozim samo do aerodroma",
+    "lead": "Isti auto, isti vozač, druge relacije.",
+    "items": {
+      "intercity": {
+        "sign": "Beograd, Zagreb, Beč",
+        "title": "Međugradske i međunarodne vožnje",
+        "text": "Od adrese do adrese, bez presedanja i čekanja na stanici. Granicu prelazimo zajedno."
+      },
+      "events": {
+        "sign": "Svadbe, koncerti, proslave",
+        "title": "Događaji i izlasci",
+        "text": "Vozim vas na svadbu, koncert ili proslavu i vraćam kući kad se završi, da niko iz društva ne mora da vozi."
+      },
+      "trips": {
+        "sign": "Fruška gora, vinarije, banje",
+        "title": "Izleti",
+        "text": "Dan na Fruškoj gori, obilazak vinarija ili odlazak u banju. Čekam vas dok ne budete spremni za povratak."
+      },
+      "cargo": {
+        "sign": "Paketi, dokumenta, kupovina",
+        "title": "Manji teret",
+        "text": "Paket, dokumenta ili stvari koje staju u Galaxy sa spuštenim sedištima. Nije kombi, ali stane više nego što mislite."
+      }
+    }
+  },
+  "vehicle": {
+    "title": "Ford Galaxy: sedam sedišta, šest za vas",
+    "lead": "Jedno sedište je moje, ostalih šest su vaša. Izaberite koliko vas putuje i vidite gde sedite.",
+    "passengers": "Broj putnika",
+    "fewer": "Jedan putnik manje",
+    "more": "Jedan putnik više",
+    "status": "Putnika: {count}",
+    "roomy": "Do četiri putnika: treći red je spušten, pa je prtljažnik veliki.",
+    "full": "Petoro ili šestoro: sedi se i u trećem redu, pa je prtljažnik manji. Javite koliko kofera nosite.",
+    "driver": "Ćomi",
+    "boot": "Prtljažnik",
+    "map": "Raspored sedišta u vozilu"
+  },
+  "about": {
+    "title": "Ja sam Ćomi.",
+    "text": [
+      "Ćomitrans sam ja i moj Galaxy. Kad zakažete vožnju, javljam se ja, dolazim ja i vozim ja.",
+      "Nema dispečera i nema iznenađenja: znate ko vas čeka i u kom autu."
+    ],
+    "plate": "Registarska tablica sa natpisom NS ĆOMI"
+  },
+  "faq": {
+    "title": "Pitanja i odgovori",
+    "items": [
+      {
+        "q": "Kako da zakažem vožnju?",
+        "a": "Pozovite me ili pošaljite poruku na WhatsApp ili Viber. Najbrže je preko formulara na dnu strane: upišete detalje i poruka se sama sastavi."
+      },
+      {
+        "q": "Koliko ranije treba da se javim?",
+        "a": "Što ranije, to bolje, naročito za rane jutarnje letove i vikende. Javite se i u poslednjem trenutku: ako sam slobodan, vozim."
+      },
+      {
+        "q": "Šta ako moj let kasni?",
+        "a": "Pošaljite mi broj leta. Pratim vreme sletanja i dolazim kad avion zaista sleti."
+      },
+      {
+        "q": "Koliko prtljaga staje?",
+        "a": "Zavisi od toga koliko vas putuje. Do četiri putnika prtljažnik je veliki. Sa petoro ili šestoro staje manje, pa javite unapred koliko kofera nosite."
+      },
+      {
+        "q": "Kako se plaća?",
+        "a": "Cenu dogovaramo pre vožnje, tako da na kraju nema iznenađenja."
+      },
+      {
+        "q": "Da li vozite noću i praznicima?",
+        "a": "Da. Letovi ne biraju vreme, pa ne biram ni ja."
+      },
+      {
+        "q": "Vozite li i do drugih gradova i aerodroma?",
+        "a": "Da. Ako vaše relacije nema na spisku, javite odakle i dokle i odgovaram sa cenom."
+      }
+    ]
+  },
+  "booking": {
+    "title": "Zakažite vožnju",
+    "lead": "Popunite ono što znate. Poruka se sastavlja dok kucate, a vi birate kako ćete je poslati.",
+    "fields": {
+      "route": "Relacija",
+      "other": "Druga relacija",
+      "direction": "Smer",
+      "to": "Na aerodrom",
+      "from": "Sa aerodroma",
+      "date": "Datum",
+      "time": "Vreme",
+      "timeHint": "Vreme leta ili željeni polazak",
+      "address": "Adresa",
+      "addressHint": "Ulica i broj, mesto",
+      "destination": "Odredište",
+      "passengers": "Putnika",
+      "luggage": "Kofera",
+      "fewer": "Manje",
+      "more": "Više",
+      "flight": "Broj leta",
+      "name": "Ime",
+      "note": "Napomena",
+      "optional": "nije obavezno"
+    },
+    "preview": "Vaša poruka",
+    "send": {
+      "whatsapp": "Pošaljite na WhatsApp",
+      "viber": "Pošaljite na Viber",
+      "email": "Pošaljite e-poštom",
+      "copy": "Kopirajte poruku",
+      "call": "ili pozovite"
+    },
+    "status": {
+      "copied": "Poruka je kopirana.",
+      "viber": "Poruka je kopirana. Ako se ne pojavi u Viberu, nalepite je."
+    },
+    "privacy": "Ništa što upišete ne šalje se sa ove strane. Poruka nastaje na vašem uređaju i šaljete je sami.",
+    "noscript": "Formular radi samo uz JavaScript. Pozovite ili pišite direktno:",
+    "message": {
+      "greeting": "Zdravo Ćomi, želim da zakažem vožnju.",
+      "subject": "Vožnja",
+      "base": "Novi Sad",
+      "airport": "Aerodrom",
+      "route": "Relacija",
+      "when": "Datum i vreme",
+      "date": "{d}.{m}.{y}.",
+      "at": "u",
+      "address": "Adresa",
+      "destination": "Odredište",
+      "passengers": "Putnika",
+      "luggage": "Kofera",
+      "flight": "Broj leta",
+      "name": "Ime",
+      "note": "Napomena",
+      "months": [
+        "januar",
+        "februar",
+        "mart",
+        "april",
+        "maj",
+        "jun",
+        "jul",
+        "avgust",
+        "septembar",
+        "oktobar",
+        "novembar",
+        "decembar"
+      ]
+    }
+  },
+  "footer": {
+    "closing": "Srećan put!",
+    "contact": "Kontakt",
+    "languages": "Jezik",
+    "privacy": "Bez kolačića i bez praćenja. Ovaj sajt ne prikuplja nikakve podatke.",
+    "rights": "© Ćomitrans, Novi Sad",
+    "top": "Na vrh strane"
+  },
+  "notFound": {
+    "metaTitle": "Strana nije pronađena | Ćomitrans",
+    "title": "Slepa ulica.",
+    "text": "Na ovoj adresi nema strane. Vratite se na početak.",
+    "home": "Početna strana"
+  }
+}
