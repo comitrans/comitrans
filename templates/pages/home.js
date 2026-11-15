@@ -6,6 +6,7 @@ import { header, trip } from "../sections/header.js";
 import { hero } from "../sections/hero.js";
 import { rides } from "../sections/rides.js";
 import { routes } from "../sections/routes.js";
+import { vehicle } from "../sections/vehicle.js";
 
 export function home(context) {
   const { t } = context;
@@ -17,6 +18,7 @@ export function home(context) {
       ${header(context)} ${trip(context)}
       <main id="main">
         ${hero(context)} ${airport(context)} ${routes(context)} ${rides(context)}
+        ${vehicle(context)}
       </main>
       ${dock(context)}
     `,

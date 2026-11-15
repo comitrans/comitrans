@@ -1,0 +1,110 @@
+.vehicle-section {
+  background: var(--paper-deep);
+}
+
+.vehicle-grid {
+  display: grid;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.vehicle-copy .section-head {
+  margin-bottom: 2rem;
+}
+
+/* Until the script picks one, both notes read as a paragraph. */
+.seats-note {
+  max-width: 31rem;
+  margin-top: 1.25rem;
+  color: var(--ink-soft);
+}
+
+.seats-note[data-state="roomy"] [data-seats-full],
+.seats-note[data-state="full"] [data-seats-roomy] {
+  display: none;
+}
+
+.seatmap {
+  width: 100%;
+  max-width: 38rem;
+  justify-self: center;
+}
+
+.seatmap svg {
+  width: 100%;
+  height: auto;
+}
+
+.cabin-shell {
+  fill: var(--white);
+  stroke: var(--ink);
+  stroke-width: 3;
+}
+
+.cabin-glass {
+  fill: #c5d6da;
+}
+
+.cabin-boot {
+  fill: #e4e7df;
+}
+
+.cabin-boot-more {
+  opacity: 0;
+  transition: opacity 0.3s var(--ease);
+}
+
+.cabin-label {
+  fill: var(--ink-soft);
+  font-family: var(--text);
+  font-size: 13px;
+  font-weight: 700;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+.cabin-label-driver {
+  fill: var(--white);
+}
+
+.cabin-wheel {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+.seat {
+  fill: var(--white);
+  stroke: var(--steel);
+  stroke-width: 2.5;
+  transition:
+    fill 0.25s var(--ease),
+    stroke 0.25s var(--ease),
+    opacity 0.25s var(--ease);
+}
+
+.seat.is-taken {
+  fill: var(--green);
+  stroke: var(--green-deep);
+}
+
+.seat-driver {
+  fill: var(--ink);
+  stroke: var(--ink);
+}
+
+.seatmap.is-roomy .cabin-boot-more {
+  opacity: 1;
+}
+
+.seatmap.is-roomy .seat-folding {
+  opacity: 0;
+}
+
+@media (min-width: 60rem) {
+  .vehicle-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    gap: 4rem;
+  }
+}

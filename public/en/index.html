@@ -84,6 +84,7 @@
     <link rel="stylesheet" href="../css/06-airport.css" />
     <link rel="stylesheet" href="../css/07-routes.css" />
     <link rel="stylesheet" href="../css/08-rides.css" />
+    <link rel="stylesheet" href="../css/09-vehicle.css" />
     <script type="module" src="../js/main.js"></script>
   </head>
   <body>
@@ -623,6 +624,108 @@
               </div>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section class="section vehicle-section" id="vehicle">
+        <div class="wrap vehicle-grid">
+          <div class="vehicle-copy">
+            <div class="section-head">
+              <h2>Ford Galaxy: seven seats, six of them yours</h2>
+              <p>
+                One seat is mine, the other six are yours. Pick how many of you are travelling and
+                see where you sit.
+              </p>
+            </div>
+
+            <div
+              class="stepper"
+              role="group"
+              aria-label="Passengers"
+              data-stepper="passengers"
+              data-min="1"
+              data-max="6"
+              hidden
+            >
+              <span class="stepper-label">Passengers</span>
+              <button type="button" data-step="-1" aria-label="One passenger fewer">
+                <svg
+                  class="icon icon-minus"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M6 12h12" />
+                </svg>
+              </button>
+              <output data-stepper-value>1</output>
+              <button type="button" data-step="1" aria-label="One more passenger">
+                <svg
+                  class="icon icon-plus"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M12 6v12M6 12h12" />
+                </svg>
+              </button>
+            </div>
+
+            <p class="seats-note" data-seats-note>
+              <span data-seats-roomy
+                >Up to four passengers: the third row is folded, so the boot is large.</span
+              >
+              <span data-seats-full
+                >Five or six: the third row is in use, so the boot is smaller. Tell me how many
+                suitcases you are bringing.</span
+              >
+            </p>
+          </div>
+          <figure class="seatmap" data-seatmap data-roomy-up-to="4">
+            <svg viewBox="0 0 520 260" role="img" aria-label="Seat layout of the vehicle">
+              <rect class="cabin-shell" x="8" y="20" width="504" height="220" rx="70" />
+              <path
+                class="cabin-glass"
+                d="M404 44 C436 70 446 104 446 130 C446 156 436 190 404 216 Z"
+              />
+              <path class="cabin-glass" d="M52 60 C40 84 36 108 36 130 C36 152 40 176 52 200 Z" />
+              <rect class="cabin-boot" x="62" y="46" width="52" height="168" rx="10" />
+              <rect
+                class="cabin-boot cabin-boot-more"
+                x="62"
+                y="46"
+                width="150"
+                height="168"
+                rx="10"
+              />
+              <text class="cabin-label" x="88" y="130" transform="rotate(-90 88 130)">Boot</text>
+              <rect class="seat" data-seat="1" x="322" y="143" width="52" height="52" rx="12" />
+              <rect class="seat" data-seat="2" x="222" y="48" width="52" height="52" rx="12" />
+              <rect class="seat" data-seat="3" x="222" y="160" width="52" height="52" rx="12" />
+              <rect class="seat" data-seat="4" x="222" y="104" width="52" height="52" rx="12" />
+              <rect
+                class="seat seat-folding"
+                data-seat="5"
+                x="126"
+                y="62"
+                width="52"
+                height="52"
+                rx="12"
+              />
+              <rect
+                class="seat seat-folding"
+                data-seat="6"
+                x="126"
+                y="146"
+                width="52"
+                height="52"
+                rx="12"
+              />
+              <rect class="seat seat-driver" x="322" y="65" width="52" height="52" rx="12" />
+              <text class="cabin-label cabin-label-driver" x="348" y="96">Ćomi</text>
+              <path class="cabin-wheel" d="M388 76 a16 16 0 0 1 0 30" />
+            </svg>
+          </figure>
         </div>
       </section>
     </main>
