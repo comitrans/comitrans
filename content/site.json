@@ -3,7 +3,6 @@
   "origin": "https://comitrans.net",
   "launched": false,
   "todo": [
-    "contact: the phone, WhatsApp and Viber numbers are placeholders",
     "contact: set up forwarding for the info@ address",
     "routes: confirm distances and usual door-to-door times; add prices or keep them on request",
     "airport: confirm the routine the steps describe (following flights, waiting at arrivals)",
@@ -42,12 +41,12 @@
   "plate": { "country": "SRB", "text": "ĆOMI" },
   "contact": {
     "phone": {
-      "e164": "+381600000000",
-      "national": "060 000 0000",
-      "international": "+381 60 000 0000"
+      "e164": "+38163501649",
+      "national": "063 501 649",
+      "international": "+381 63 501 649"
     },
-    "whatsapp": "+381600000000",
-    "viber": "+381600000000",
+    "whatsapp": "+38163501649",
+    "viber": "+38163501649",
     "email": { "user": "info", "domain": "comitrans.net" }
   },
   "business": null,
