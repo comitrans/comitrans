@@ -37,6 +37,7 @@
   ],
   "fallbackLocale": "en",
   "base": { "code": "NS" },
+  "plate": { "country": "SRB", "text": "ĆOMI" },
   "contact": {
     "phone": {
       "e164": "+381600000000",

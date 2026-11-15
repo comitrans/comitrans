@@ -1,0 +1,148 @@
+.about-grid {
+  display: grid;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about h2 {
+  font-size: var(--size-heading);
+}
+
+.about-copy p {
+  max-width: 35rem;
+  margin-top: 1em;
+  font-size: var(--size-lead);
+  line-height: 1.45;
+}
+
+/* A licence plate in the proportions of a real one; every part is sized in
+   em, so its font-size scales the whole plate. */
+.plate {
+  display: flex;
+  justify-self: center;
+  border: 0.07em solid var(--ink);
+  border-radius: 0.14em;
+  background: var(--white);
+  box-shadow: 0 0.5em 0.9em -0.55em rgb(20 24 26 / 0.5);
+  font-size: clamp(2.75rem, 1.4rem + 6.6vw, 5rem);
+  line-height: 1;
+  rotate: -3deg;
+}
+
+.plate-band {
+  display: grid;
+  align-items: end;
+  justify-items: center;
+  width: 3.4em;
+  padding-bottom: 0.7em;
+  background: var(--blue);
+  color: var(--white);
+  font-family: var(--text);
+  font-size: 0.2em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.plate-text {
+  display: flex;
+  align-items: center;
+  gap: 0.16em;
+  padding: 0.12em 0.22em 0.17em;
+  font-family: var(--display);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.plate-dot {
+  width: 0.15em;
+  height: 0.2em;
+  border-radius: 0.03em 0.03em 0.08em 0.08em;
+  background: var(--steel);
+}
+
+.faq-grid {
+  display: grid;
+  gap: 0 4rem;
+}
+
+.faq-list details {
+  border-top: 1px solid var(--rule);
+}
+
+.faq-list details:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+
+.faq-list summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.15rem 0;
+  list-style: none;
+  cursor: pointer;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list h3 {
+  font-family: var(--text);
+  font-size: var(--size-lead);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.faq-list summary .icon {
+  transition: rotate 0.2s var(--ease);
+}
+
+.faq-list details[open] summary .icon {
+  rotate: 180deg;
+}
+
+.faq-list p {
+  max-width: 41rem;
+  padding: 0 2.5rem 1.4rem 0;
+  color: var(--ink-soft);
+}
+
+/* An answer opens to its own height where the browser can animate that. */
+@supports (interpolate-size: allow-keywords) {
+  .faq-list {
+    interpolate-size: allow-keywords;
+  }
+
+  .faq-list details::details-content {
+    block-size: 0;
+    overflow: clip;
+    transition:
+      block-size 0.3s var(--ease),
+      content-visibility 0.3s allow-discrete;
+  }
+
+  .faq-list details[open]::details-content {
+    block-size: auto;
+  }
+}
+
+@media (min-width: 56rem) {
+  .about-grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 4rem;
+  }
+}
+
+@media (min-width: 60rem) {
+  .faq-grid {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.5fr);
+    align-items: start;
+  }
+
+  .faq .section-head {
+    position: sticky;
+    top: calc(var(--header-height) + var(--trip-height) + 2rem);
+  }
+}
