@@ -1,0 +1,10 @@
+<svg class="skyline skyline-airport" viewBox="0 0 360 120" aria-hidden="true" focusable="false">
+  <path d="M40 120 V100 C96 84 190 84 246 100 V120 Z" />
+  <path d="M276 120 V44 H270 L266 28 H298 L294 44 H288 V120 Z" />
+  <rect x="280" y="12" width="3" height="16" />
+  <g transform="translate(118 46) rotate(-17)">
+    <path d="M-46 0 C-46 -5 -40 -6 -30 -6 L34 -6 C44 -6 52 -2 52 1 C52 4 44 6 34 6 L-36 6 C-42 6 -46 4 -46 0 Z" />
+    <path d="M-44 -4 L-54 -22 H-44 L-30 -6 Z" />
+    <path d="M-4 4 L-22 24 H-12 L14 4 Z" />
+  </g>
+</svg>

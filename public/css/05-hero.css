@@ -1,0 +1,353 @@
+/* The copy sits in the page's column and the scene runs edge to edge, so the
+   hero is its own grid rather than a .wrap. */
+.hero {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(var(--gutter), 1fr)
+    [content-start] minmax(0, var(--wrap)) [content-end]
+    minmax(var(--gutter), 1fr) [full-end];
+  padding-top: clamp(2rem, 1rem + 4.4vw, 4.75rem);
+  overflow-x: clip;
+}
+
+.hero > * {
+  grid-column: content;
+}
+
+.hero h1 {
+  font-size: var(--size-hero);
+  line-height: 0.84;
+  letter-spacing: -0.012em;
+}
+
+.hero h1.hero-long {
+  font-size: var(--size-hero-long);
+}
+
+.hero-lead {
+  max-width: 36rem;
+  margin-top: 1.1em;
+  font-size: var(--size-lead);
+  line-height: 1.4;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem 1.5rem;
+  margin-top: clamp(1.5rem, 1.2rem + 1.2vw, 2.25rem);
+}
+
+.hero-call a {
+  margin-left: 0.2em;
+  font-size: 1.25em;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.hero-also {
+  margin-block: 1.1rem 0;
+  color: var(--ink-soft);
+  font-size: var(--size-small);
+}
+
+.hero-also a {
+  color: var(--ink);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* The scene under the copy: a strip of road with the vehicle on it. --road is
+   the height of the carriageway, which everything standing on it measures
+   from. --drive is the page's scroll in pixels and --dash the lane marking's
+   offset; both are written by the script. */
+.hero-scene {
+  --road: clamp(3.5rem, 2.2rem + 4.6vw, 6.75rem);
+  --drive: 0;
+  --dash: 0px;
+  position: relative;
+  grid-column: full;
+  height: clamp(11rem, 6rem + 21vw, 25rem);
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.road {
+  position: absolute;
+  inset: auto 0 0;
+  height: var(--road);
+  background:
+    linear-gradient(var(--white), var(--white)) 0 13% / 100% 0.1875rem no-repeat,
+    linear-gradient(var(--white), var(--white)) 0 90% / 100% 0.1875rem no-repeat,
+    var(--asphalt);
+  overflow: hidden;
+}
+
+.road-dashes {
+  position: absolute;
+  top: 52%;
+  left: 0;
+  width: calc(100% + 7rem);
+  height: 0.25rem;
+  background: repeating-linear-gradient(90deg, var(--white) 0 3rem, transparent 3rem 7rem);
+  translate: calc(var(--dash) * -1) 0;
+}
+
+.skyline {
+  position: absolute;
+  bottom: calc(var(--road) - 1px);
+  height: clamp(3.25rem, 1.6rem + 6vw, 8.75rem);
+  fill: #dde1d8;
+  stroke: #dde1d8;
+}
+
+.skyline-city {
+  left: 0;
+}
+
+.skyline-airport {
+  right: 0;
+}
+
+.hero-signpost {
+  position: absolute;
+  right: max(var(--gutter), (100% - var(--wrap)) / 2);
+  bottom: calc(var(--road) * 0.87);
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  font-size: clamp(1.375rem, 0.85rem + 2vw, 2.75rem);
+}
+
+.hero-sign {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.15em 0.5em;
+  padding: 0.5em 0.7em 0.55em;
+  transform-origin: 50% 100%;
+  animation: raise 0.7s var(--ease-arrive) 1.3s both;
+}
+
+.hero-sign .pictogram {
+  font-size: 1.5em;
+}
+
+.hero-sign-names {
+  display: grid;
+  gap: 0.12em;
+  white-space: nowrap;
+}
+
+.hero-sign-names span:first-child {
+  font-size: 0.72em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.hero-sign-km {
+  padding-left: 0.2em;
+  font-size: 1.9em;
+  font-weight: 800;
+}
+
+.hero-posts {
+  display: flex;
+  justify-content: space-between;
+  width: 62%;
+  height: clamp(3rem, 1.2rem + 7vw, 8.5rem);
+}
+
+.hero-posts .post {
+  width: clamp(0.3rem, 0.2rem + 0.3vw, 0.5rem);
+}
+
+.hero-car {
+  position: absolute;
+  bottom: calc(var(--road) * 0.5);
+  left: 0.25rem;
+  z-index: 2;
+  width: clamp(15rem, 8rem + 31vw, 37.5rem);
+  animation: arrive 1.7s var(--ease-arrive) both;
+}
+
+.hero-car img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.vehicle {
+  --body: #3b4449;
+  --body-shade: #2a3236;
+  --glass: #b7cbd1;
+  --glass-shade: #8ea3ab;
+  --trim: #1b2023;
+  --rim: #d3d8da;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.vehicle-body {
+  transform-box: fill-box;
+  transform-origin: 80% 100%;
+  animation: settle 0.7s ease-out 1.55s both;
+}
+
+.vehicle-roll {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: roll 1.7s var(--ease-arrive) both;
+}
+
+.vehicle-spin {
+  transform-box: fill-box;
+  transform-origin: center;
+  rotate: calc(var(--drive) * 1.1deg);
+}
+
+.vehicle-beam {
+  animation: glow 0.5s ease-out 1.75s both;
+}
+
+.vehicle-indicator {
+  fill: var(--amber);
+  animation: indicate 0.55s steps(2, jump-none) 1.9s 3 both;
+}
+
+.v-body {
+  fill: var(--body);
+}
+
+.v-shade {
+  fill: var(--body-shade);
+}
+
+.v-glass {
+  fill: var(--glass);
+}
+
+.v-tint {
+  fill: var(--glass-shade);
+}
+
+.v-trim {
+  fill: var(--trim);
+  stroke: var(--trim);
+}
+
+.v-driver {
+  fill: var(--trim);
+  opacity: 0.5;
+}
+
+.v-seam {
+  stroke: var(--body-shade);
+}
+
+.v-light {
+  fill: #fff3c4;
+}
+
+.v-tail {
+  fill: #d43d33;
+}
+
+.v-well {
+  fill: #6c7478;
+}
+
+.v-spoke {
+  stroke: var(--rim);
+}
+
+.v-rim {
+  fill: var(--rim);
+}
+
+.v-shadow {
+  opacity: 0.3;
+}
+
+/* The arrival plays when the scene is first seen rather than on load, since
+   on a phone it starts below the fold. Without scripting nothing waits. */
+@media (scripting: enabled) {
+  .hero-scene:not(.is-seen)
+    :is(.hero-car, .hero-sign, .vehicle-body, .vehicle-roll, .vehicle-beam, .vehicle-indicator) {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes arrive {
+  from {
+    translate: -90vw 0;
+  }
+}
+
+@keyframes roll {
+  from {
+    rotate: -1400deg;
+  }
+}
+
+@keyframes settle {
+  35% {
+    rotate: 0.7deg;
+    translate: 0 0.6%;
+  }
+}
+
+@keyframes glow {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes indicate {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.35;
+  }
+}
+
+@keyframes raise {
+  from {
+    opacity: 0;
+    transform: perspective(40rem) rotateX(-86deg);
+  }
+}
+
+@media (max-width: 39.99rem) {
+  .hero-signpost {
+    right: 0.75rem;
+  }
+}
+
+@media (min-width: 40rem) {
+  .hero-car {
+    left: max(var(--gutter), (100% - var(--wrap)) / 2);
+  }
+}
+
+/* From here the copy leaves the right of the hero free, so the scene moves up
+   into it: the sign stands beside the lead and the vehicle parks below it. */
+@media (min-width: 62rem) {
+  .hero-scene {
+    order: 2;
+    margin-top: clamp(-9.5rem, -4rem - 4vw, -6rem);
+  }
+
+  .hero-also {
+    order: 1;
+  }
+
+  .hero-car {
+    left: calc(max(var(--gutter), (100% - var(--wrap)) / 2) + 16%);
+  }
+}

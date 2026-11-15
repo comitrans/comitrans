@@ -80,6 +80,7 @@
     <link rel="stylesheet" href="../css/02-layout.css" />
     <link rel="stylesheet" href="../css/03-signs.css" />
     <link rel="stylesheet" href="../css/04-header.css" />
+    <link rel="stylesheet" href="../css/05-hero.css" />
     <script type="module" src="../js/main.js"></script>
   </head>
   <body>
@@ -150,7 +151,197 @@
       </div>
     </div>
 
-    <main id="main"></main>
+    <main id="main">
+      <section class="hero">
+        <h1 class="hero-long">From your door to the airport.</h1>
+        <p class="hero-lead">
+          Private transfers from Novi Sad to the airport and back. I'm Ćomi, I do the driving, and
+          the Ford Galaxy seats up to six.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#booking"
+            >Book a ride<svg
+              class="icon icon-arrow"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" /></svg
+          ></a>
+          <p class="hero-call">
+            or call
+            <a href="tel:+381600000000">+381 60 000 0000</a>
+          </p>
+        </div>
+
+        <div class="hero-scene" data-arrival data-drive>
+          <svg
+            class="skyline skyline-city"
+            viewBox="0 0 520 120"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M0 120 V96 C28 88 62 82 104 82 C128 82 150 90 176 120 Z" />
+            <path d="M56 84 V56 H52 L63 40 L74 56 H70 V84 Z" />
+            <rect x="150" y="101" width="290" height="4" />
+            <rect x="246" y="34" width="6" height="86" />
+            <rect x="338" y="34" width="6" height="86" />
+            <path
+              d="M249 36 L182 101 M249 36 L204 101 M249 36 L226 101 M249 36 L272 101 M249 36 L294 101 M341 36 L296 101 M341 36 L318 101 M341 36 L364 101 M341 36 L386 101 M341 36 L408 101"
+              fill="none"
+              stroke-width="1.4"
+            />
+            <path d="M430 120 V88 H452 V76 H470 V120 Z" />
+            <path d="M474 120 V70 H480 L484 22 L488 70 H494 V120 Z" />
+            <path d="M496 120 V92 H520 V120 Z" />
+          </svg>
+          <svg
+            class="skyline skyline-airport"
+            viewBox="0 0 360 120"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M40 120 V100 C96 84 190 84 246 100 V120 Z" />
+            <path d="M276 120 V44 H270 L266 28 H298 L294 44 H288 V120 Z" />
+            <rect x="280" y="12" width="3" height="16" />
+            <g transform="translate(118 46) rotate(-17)">
+              <path
+                d="M-46 0 C-46 -5 -40 -6 -30 -6 L34 -6 C44 -6 52 -2 52 1 C52 4 44 6 34 6 L-36 6 C-42 6 -46 4 -46 0 Z"
+              />
+              <path d="M-44 -4 L-54 -22 H-44 L-30 -6 Z" />
+              <path d="M-4 4 L-22 24 H-12 L14 4 Z" />
+            </g>
+          </svg>
+          <div class="hero-signpost" aria-hidden="true">
+            <div class="sign hero-sign">
+              <svg class="pictogram" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                <path
+                  d="M24 2C25.7 2 27 4.5 27 8V18L45 29V33L27 28V38L32 42V45L24 43L16 45V42L21 38V28L3 33V29L21 18V8C21 4.5 22.3 2 24 2Z"
+                />
+              </svg>
+              <span class="hero-sign-names">
+                <span lang="sr-Cyrl">Аеродром Београд</span>
+                <span>Belgrade Airport</span>
+              </span>
+              <span class="hero-sign-km">80</span>
+            </div>
+            <div class="hero-posts"><span class="post"></span><span class="post"></span></div>
+          </div>
+          <div class="hero-car">
+            <svg class="vehicle" viewBox="0 0 680 250" aria-hidden="true" focusable="false">
+              <defs>
+                <linearGradient id="vehicle-beam" x1="0" x2="1" y1="0" y2="0">
+                  <stop offset="0" stop-color="#fff3c4" stop-opacity="0.8" />
+                  <stop offset="1" stop-color="#fff3c4" stop-opacity="0" />
+                </linearGradient>
+                <clipPath id="vehicle-shell">
+                  <path
+                    d="M44 206 L38 168 C35 146 38 118 46 96 C52 76 62 58 80 48 C92 42 106 40 124 40 L336 38 C366 39 386 46 404 58 L470 100 C520 104 574 112 612 128 C630 136 640 152 641 172 L640 200 C640 204 637 206 632 206 L544 206 A48 48 0 1 0 452 206 L198 206 A48 48 0 1 0 106 206 Z"
+                  />
+                </clipPath>
+              </defs>
+              <ellipse class="v-shadow" cx="342" cy="233" rx="312" ry="7" />
+              <path
+                class="vehicle-beam"
+                d="M634 142 L960 92 L960 236 L634 168 Z"
+                fill="url(#vehicle-beam)"
+              />
+              <g class="vehicle-body">
+                <path
+                  class="v-trim"
+                  d="M142 39 L322 37"
+                  fill="none"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                />
+                <path
+                  class="v-body"
+                  d="M44 206 L38 168 C35 146 38 118 46 96 C52 76 62 58 80 48 C92 42 106 40 124 40 L336 38 C366 39 386 46 404 58 L470 100 C520 104 574 112 612 128 C630 136 640 152 641 172 L640 200 C640 204 637 206 632 206 L544 206 A48 48 0 1 0 452 206 L198 206 A48 48 0 1 0 106 206 Z"
+                />
+                <g clip-path="url(#vehicle-shell)">
+                  <rect class="v-shade" x="0" y="184" width="680" height="30" />
+                </g>
+                <path
+                  class="v-glass"
+                  d="M84 99 C87 84 94 68 108 56 L114 52 L334 50 C356 51 374 57 390 67 L441 99 Z"
+                />
+                <path class="v-tint" d="M84 99 C87 84 94 68 108 56 L114 52 L304 50.3 L304 99 Z" />
+                <path
+                  class="v-driver"
+                  d="M366 62 a12 12 0 1 0 0.01 0 Z M344 99 C346 90 355 87 366 87 C377 87 386 90 388 99 Z"
+                />
+                <rect class="v-body" x="192" y="47" width="11" height="54" />
+                <rect class="v-body" x="298" y="47" width="12" height="54" />
+                <path
+                  class="v-seam"
+                  d="M197 101 V198 M304 101 V200 M443 101 C446 128 450 150 452 172 M54 104 L470 103"
+                  fill="none"
+                  stroke-width="2"
+                />
+                <rect class="v-trim" x="212" y="114" width="24" height="6" rx="3" />
+                <rect class="v-trim" x="318" y="114" width="24" height="6" rx="3" />
+                <path
+                  class="v-shade"
+                  d="M432 100 V89 C432 84 435 81 440 81 L453 81 C458 81 461 84 461 89 V98 Z"
+                />
+                <path
+                  class="v-light"
+                  d="M592 126 C606 128 622 134 632 146 L606 143 C600 136 596 131 590 130 Z"
+                />
+                <path class="vehicle-indicator" d="M604 150 L628 153 L629 159 L605 156 Z" />
+                <path
+                  class="v-tail"
+                  d="M41 112 C39 126 38 142 39 156 L51 154 C50 142 51 126 54 114 Z"
+                />
+                <path class="v-trim" d="M612 178 L640 176 L640 190 L610 192 Z" />
+              </g>
+              <g transform="translate(152 192)">
+                <path class="v-trim" d="M-46 14 A48 48 0 1 1 46 14 Z" />
+                <g class="vehicle-roll">
+                  <g class="vehicle-spin">
+                    <circle class="v-trim" r="40" />
+                    <circle class="v-well" r="27" />
+                    <path
+                      class="v-spoke"
+                      d="M0 0 L0 -25 M0 0 L23.8 -7.7 M0 0 L14.7 20.2 M0 0 L-14.7 20.2 M0 0 L-23.8 -7.7"
+                      fill="none"
+                      stroke-width="8"
+                      stroke-linecap="round"
+                    />
+                    <circle class="v-spoke" r="27" fill="none" stroke-width="4" />
+                    <circle class="v-rim" r="7" />
+                  </g>
+                </g>
+              </g>
+              <g transform="translate(498 192)">
+                <path class="v-trim" d="M-46 14 A48 48 0 1 1 46 14 Z" />
+                <g class="vehicle-roll">
+                  <g class="vehicle-spin">
+                    <circle class="v-trim" r="40" />
+                    <circle class="v-well" r="27" />
+                    <path
+                      class="v-spoke"
+                      d="M0 0 L0 -25 M0 0 L23.8 -7.7 M0 0 L14.7 20.2 M0 0 L-14.7 20.2 M0 0 L-23.8 -7.7"
+                      fill="none"
+                      stroke-width="8"
+                      stroke-linecap="round"
+                    />
+                    <circle class="v-spoke" r="27" fill="none" stroke-width="4" />
+                    <circle class="v-rim" r="7" />
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="road"><span class="road-dashes"></span></div>
+        </div>
+
+        <p class="hero-also">
+          I also drive to Budapest, Timișoara, Osijek and Zagreb airports.
+          <a href="#routes">All routes</a>
+        </p>
+      </section>
+    </main>
 
     <nav class="dock" aria-label="Quick contact" data-dock>
       <a href="tel:+381600000000"
