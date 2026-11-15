@@ -1,0 +1,38 @@
+.lost {
+  display: grid;
+  justify-items: center;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  min-height: 100vh;
+  padding: clamp(3rem, 10vw, 7rem) var(--gutter);
+  text-align: center;
+}
+
+.lost-sign {
+  display: grid;
+  justify-items: center;
+}
+
+.dead-end {
+  width: clamp(7rem, 5rem + 9vw, 10.5rem);
+}
+
+.lost-sign .post {
+  width: 0.5rem;
+  height: clamp(3rem, 8vw, 5rem);
+}
+
+.lost section {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+}
+
+.lost h1 {
+  font-size: var(--size-heading);
+}
+
+.lost p {
+  max-width: 28rem;
+  font-size: var(--size-lead);
+  line-height: 1.4;
+}

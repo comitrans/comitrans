@@ -1,0 +1,6 @@
+<svg class="dead-end" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+  <rect x="2" y="2" width="116" height="116" rx="14" fill="#1d4f91" />
+  <rect x="8.5" y="8.5" width="103" height="103" rx="9" fill="none" stroke="#fff" stroke-width="3" />
+  <rect x="50" y="46" width="20" height="56" fill="#fff" />
+  <rect x="30" y="24" width="60" height="22" fill="#d43d33" />
+</svg>
