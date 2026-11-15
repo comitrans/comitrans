@@ -1,0 +1,91 @@
+.blades {
+  position: relative;
+  display: grid;
+  gap: clamp(1.75rem, 1.2rem + 2vw, 2.5rem);
+}
+
+.blade {
+  display: grid;
+  gap: 1rem;
+}
+
+.blade-sign {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-self: start;
+  gap: 0.7em;
+  width: min(100%, 15rem);
+  padding: 0.5em 0.7em 0.55em;
+  font-size: clamp(1.375rem, 1.15rem + 1vw, 1.875rem);
+  line-height: 1.05;
+  transition: translate 0.25s var(--ease);
+}
+
+.blade-sign span {
+  display: grid;
+}
+
+.blade-sign .pictogram {
+  font-size: 1.15em;
+}
+
+.blade:nth-child(even) .blade-sign {
+  flex-direction: row-reverse;
+}
+
+.blade:nth-child(even) .pictogram {
+  scale: -1 1;
+}
+
+.blade h3 {
+  font-size: var(--size-title);
+}
+
+.blade p {
+  max-width: 36rem;
+  margin-top: 0.45em;
+  color: var(--ink-soft);
+}
+
+/* On a wide screen the signs hang on one post, pointing alternately right and left. */
+@media (min-width: 54rem) {
+  .blades {
+    --blade: 15rem;
+    --reach: 7.5rem;
+  }
+
+  .blades::before {
+    content: "";
+    position: absolute;
+    top: -1.5rem;
+    bottom: -2.5rem;
+    left: calc((var(--blade) + var(--reach)) / 2 - 0.3rem);
+    width: 0.6rem;
+    border-radius: 0.3rem 0.3rem 0 0;
+    background: linear-gradient(90deg, #858d90, #c5cbcd 45%, #7b8386);
+  }
+
+  .blade {
+    grid-template-columns: calc(var(--blade) + var(--reach)) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(2rem, 4vw, 4rem);
+  }
+
+  .blade-sign {
+    position: relative;
+    width: var(--blade);
+  }
+
+  .blade:nth-child(odd) .blade-sign {
+    margin-left: var(--reach);
+  }
+
+  .blade:nth-child(odd):hover .blade-sign {
+    translate: 0.4rem 0;
+  }
+
+  .blade:nth-child(even):hover .blade-sign {
+    translate: -0.4rem 0;
+  }
+}
