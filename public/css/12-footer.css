@@ -1,0 +1,110 @@
+.site-footer {
+  padding-bottom: clamp(2rem, 1rem + 3vw, 3.5rem);
+  overflow: hidden;
+}
+
+/* The end of the road: a runway the plane leaves once the footer is seen. */
+.runway {
+  position: relative;
+  height: clamp(5rem, 3.2rem + 6vw, 8.5rem);
+  margin-bottom: clamp(1.5rem, 1rem + 3vw, 3.5rem);
+  overflow: hidden;
+}
+
+.runway .road-dashes {
+  top: auto;
+  bottom: 0.9rem;
+  translate: none;
+}
+
+.runway-plane {
+  position: absolute;
+  bottom: 1.5rem;
+  left: var(--gutter);
+  width: clamp(4.75rem, 3rem + 6vw, 8rem);
+  fill: var(--white);
+  animation:
+    roll-out 3.4s ease-in both,
+    climb 1.4s ease-in 1.6s both;
+}
+
+@media (scripting: enabled) {
+  .runway:not(.is-seen) .runway-plane {
+    animation-play-state: paused;
+  }
+}
+
+/* The run and the climb are two animations, each one sweep from start to end.
+   An easing applies between every pair of keyframes, so a single animation
+   with stages in it would brake at each of them. */
+@keyframes roll-out {
+  to {
+    translate: 118vw 0;
+  }
+}
+
+@keyframes climb {
+  to {
+    transform: translateY(-5.5rem) rotate(-16deg);
+  }
+}
+
+.footer-closing {
+  font-family: var(--display);
+  font-size: clamp(3.75rem, 1.8rem + 9.5vw, 9.5rem);
+  font-weight: 800;
+  line-height: 0.9;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);
+}
+
+.site-footer h2 {
+  margin-bottom: 0.6rem;
+  color: #aab3b6;
+  font-family: var(--text);
+  font-size: var(--size-small);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.site-footer li + li {
+  margin-top: 0.4rem;
+}
+
+.site-footer a {
+  text-decoration-color: rgb(255 255 255 / 0.45);
+}
+
+.site-footer a:hover {
+  text-decoration-color: currentColor;
+}
+
+.footer-notes {
+  display: grid;
+  align-content: start;
+  gap: 0.5rem;
+  color: #c4cbce;
+  font-size: var(--size-small);
+}
+
+.footer-top {
+  display: inline-block;
+  margin-top: 2.5rem;
+  font-size: var(--size-small);
+}
+
+@media (max-width: 47.99rem) {
+  .site-footer {
+    padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
+  }
+}
+
+@media (min-width: 48rem) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr 1.6fr;
+  }
+}

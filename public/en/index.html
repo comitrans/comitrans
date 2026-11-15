@@ -87,11 +87,16 @@
     <link rel="stylesheet" href="../css/09-vehicle.css" />
     <link rel="stylesheet" href="../css/10-about.css" />
     <link rel="stylesheet" href="../css/11-booking.css" />
+    <link rel="stylesheet" href="../css/12-footer.css" />
     <script type="module" src="../js/main.js"></script>
   </head>
-  <body>
+  <body data-locale="en" data-fallback="en" data-speakers="en">
     <a class="skip" href="#main">Skip to content</a>
-
+    <p class="hint" lang="sr-Latn" data-hint="sr" data-speakers="sr hr bs sh cnr" hidden>
+      Ova strana postoji i na srpskom.
+      <a href="../" hreflang="sr">Pređite na srpski</a>
+      <button type="button" data-hint-dismiss>Zatvori</button>
+    </p>
     <p class="preview">Preview: the details on this page are not confirmed yet.</p>
     <header class="site-header">
       <div class="wrap">
@@ -1136,6 +1141,51 @@
         </div>
       </section>
     </main>
+
+    <footer class="site-footer on-asphalt" data-dock-yields>
+      <div class="runway" aria-hidden="true" data-arrival>
+        <svg class="runway-plane" viewBox="0 0 120 56" aria-hidden="true" focusable="false">
+          <path
+            d="M8 30 C8 24 15 22 26 22 L92 22 C104 22 114 27 114 31 C114 35 104 38 92 38 L20 38 C13 38 8 35 8 30 Z"
+          />
+          <path d="M10 25 L0 4 H12 L28 22 Z" />
+          <path d="M52 34 L34 54 H46 L74 34 Z" />
+        </svg>
+        <span class="road-dashes"></span>
+      </div>
+      <div class="wrap">
+        <p class="footer-closing">Have a good trip!</p>
+        <div class="footer-grid">
+          <div>
+            <h2>Contact</h2>
+            <ul>
+              <li><a href="tel:+381600000000">+381 60 000 0000</a></li>
+              <li><a href="https://wa.me/381600000000">WhatsApp</a></li>
+              <li><a href="viber://chat?number=%2B381600000000">Viber</a></li>
+              <li hidden>
+                <a data-email data-user="info" data-domain="comitrans.net"></a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2>Language</h2>
+            <ul>
+              <li>
+                <a href="../" lang="sr-Latn" hreflang="sr">Srpski</a>
+              </li>
+              <li>
+                <a href="../en/" lang="en" hreflang="en">English</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-notes">
+            <p>No cookies and no tracking. This site collects no data.</p>
+            <p>© Ćomitrans, Novi Sad</p>
+          </div>
+        </div>
+        <a class="footer-top" href="#top">Back to the top</a>
+      </div>
+    </footer>
 
     <nav class="dock" aria-label="Quick contact" data-dock>
       <a href="tel:+381600000000"

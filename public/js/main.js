@@ -1,5 +1,6 @@
 import { init as arrival } from "./arrival.js";
 import { init as booking } from "./booking.js";
+import { init as chrome } from "./chrome.js";
 import { init as direction } from "./direction.js";
 import { init as drive } from "./drive.js";
 import { init as seats } from "./seats.js";
@@ -11,6 +12,7 @@ stepper();
 seats();
 booking();
 direction();
+chrome();
 arrival();
 trip();
 drive();

@@ -22,7 +22,8 @@
       "label": "SR",
       "name": "Srpski",
       "ogLocale": "sr_RS",
-      "phone": "national"
+      "phone": "national",
+      "speakers": ["sr", "hr", "bs", "sh", "cnr"]
     },
     {
       "code": "en",
@@ -32,7 +33,8 @@
       "label": "EN",
       "name": "English",
       "ogLocale": "en_GB",
-      "phone": "international"
+      "phone": "international",
+      "speakers": ["en"]
     }
   ],
   "fallbackLocale": "en",

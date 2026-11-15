@@ -23,6 +23,7 @@ const STYLES = [
   "09-vehicle",
   "10-about",
   "11-booking",
+  "12-footer",
 ];
 
 // The subsets every page draws from on first paint.
@@ -113,7 +114,11 @@ export function page(context, { title, description, body, indexed = true, styles
         )}
         <script type="module" src="${root}js/main.js"></script>
       </head>
-      <body>
+      <body
+        data-locale="${locale.code}"
+        data-fallback="${site.fallbackLocale}"
+        data-speakers="${locale.speakers.join(" ")}"
+      >
         ${body}
       </body>
     </html>`;
