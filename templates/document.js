@@ -11,7 +11,7 @@ const POLICY = [
 ].join("; ");
 
 // Link order is the cascade: a partial joins this list where its rules belong.
-const STYLES = ["01-base", "02-layout", "03-signs", "04-header", "05-hero"];
+const STYLES = ["01-base", "02-layout", "03-signs", "04-header", "05-hero", "06-airport"];
 
 // The subsets every page draws from on first paint.
 const FONTS = [

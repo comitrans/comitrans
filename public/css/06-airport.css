@@ -1,0 +1,199 @@
+.direction-switch {
+  display: inline-flex;
+  margin-bottom: 2rem;
+  padding: 0.25rem;
+  border-radius: calc(var(--radius) + 0.25rem);
+  background: var(--paper-deep);
+}
+
+.direction-switch button {
+  min-height: 2.75rem;
+  padding: 0.5em 1.2em;
+  border: 0;
+  border-radius: var(--radius);
+  background: none;
+  color: var(--ink-soft);
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 0.18s var(--ease),
+    color 0.18s var(--ease);
+}
+
+.direction-switch button[aria-pressed="true"] {
+  background: var(--green);
+  color: var(--white);
+}
+
+.direction-route {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.6rem, 2vw, 1.25rem);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+}
+
+.direction-end {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  white-space: nowrap;
+}
+
+.direction-end .pictogram {
+  width: 1.3em;
+  height: 1.3em;
+  fill: currentColor;
+}
+
+.direction-line {
+  --car: 2.75rem;
+  position: relative;
+  flex: 1;
+  height: 1.75rem;
+  background: repeating-linear-gradient(90deg, var(--steel) 0 0.75rem, transparent 0.75rem 1.5rem) 0
+    50% / 100% 2px no-repeat;
+}
+
+.direction-line svg {
+  position: absolute;
+  top: 50%;
+  width: var(--car);
+  fill: var(--ink);
+  translate: 0 -62%;
+}
+
+/* Each way has keyframes of its own so that switching restarts the drive. */
+.direction[data-way="to"] .direction-line svg {
+  animation: drive-out 1.3s var(--ease) both;
+}
+
+.direction[data-way="from"] .direction-line svg {
+  scale: -1 1;
+  animation: drive-back 1.3s var(--ease) both;
+}
+
+/* The first drive waits until the route is on screen. */
+@media (scripting: enabled) {
+  .direction:not(.is-seen) .direction-line svg {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes drive-out {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: calc(100% - var(--car));
+  }
+}
+
+@keyframes drive-back {
+  from {
+    left: calc(100% - var(--car));
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+.direction-panel h3 {
+  margin-bottom: 1.25rem;
+  font-size: var(--size-title);
+}
+
+.direction-panel + .direction-panel {
+  margin-top: 3rem;
+}
+
+/* With the switch working, its buttons name the panels and only one shows. */
+.direction.is-switchable .direction-panel h3,
+.direction.is-switchable[data-way="to"] [data-way-panel="from"],
+.direction.is-switchable[data-way="from"] [data-way-panel="to"] {
+  display: none;
+}
+
+.direction.is-switchable .direction-panel {
+  margin-top: 0;
+}
+
+.steps {
+  display: grid;
+  gap: 1.75rem;
+  counter-reset: step;
+}
+
+.steps li {
+  position: relative;
+  padding-left: 4rem;
+  counter-increment: step;
+}
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  top: -0.25rem;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--green);
+  color: var(--white);
+  font-family: var(--display);
+  font-size: 1.625rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.steps li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 2.85rem;
+  bottom: -1.4rem;
+  left: calc(1.375rem - 1px);
+  width: 2px;
+  background: repeating-linear-gradient(var(--steel) 0 0.4rem, transparent 0.4rem 0.8rem);
+}
+
+.steps h4 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: var(--size-title);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.steps p {
+  margin-top: 0.5em;
+  color: var(--ink-soft);
+}
+
+@media (min-width: 60rem) {
+  .steps {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2.5rem;
+  }
+
+  .steps li {
+    padding: 4rem 0 0;
+  }
+
+  .steps li::before {
+    top: 0;
+  }
+
+  .steps li:not(:last-child)::after {
+    top: calc(1.375rem - 1px);
+    right: -2rem;
+    bottom: auto;
+    left: 3.25rem;
+    width: auto;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, var(--steel) 0 0.4rem, transparent 0.4rem 0.8rem);
+  }
+}

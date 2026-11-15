@@ -81,6 +81,7 @@
     <link rel="stylesheet" href="css/03-signs.css" />
     <link rel="stylesheet" href="css/04-header.css" />
     <link rel="stylesheet" href="css/05-hero.css" />
+    <link rel="stylesheet" href="css/06-airport.css" />
     <script type="module" src="js/main.js"></script>
   </head>
   <body>
@@ -338,6 +339,96 @@
           Vozim i do aerodroma u Budimpešti, Temišvaru, Osijeku i Zagrebu.
           <a href="#relacije">Sve relacije</a>
         </p>
+      </section>
+
+      <section class="section airport" id="aerodrom">
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Aerodromski transfer</h2>
+            <p>
+              Jedna poruka je dovoljna. Vi pošaljete kada i odakle, ja javim cenu i vreme polaska.
+            </p>
+          </div>
+          <div class="direction" data-arrival data-direction data-way="to">
+            <div class="direction-switch" role="group" aria-label="Smer vožnje" hidden>
+              <button type="button" data-way-button="to" aria-pressed="true">Na aerodrom</button
+              ><button type="button" data-way-button="from" aria-pressed="false">
+                Sa aerodroma
+              </button>
+            </div>
+            <div class="direction-route" aria-hidden="true">
+              <span class="direction-end"
+                ><svg
+                  class="icon icon-house"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M4 11.5 12 5l8 6.5M6.5 10v9h11v-9M10 19v-5h4v5" /></svg
+                >Vaša adresa</span
+              >
+              <span class="direction-line"
+                ><svg viewBox="0 0 44 20" aria-hidden="true" focusable="false">
+                  <path
+                    d="M2 14 L2.5 9 C3 6.5 5 3.5 9 3 L24 2.6 C27.5 2.8 30 4.5 32.5 7.2 L38.5 8.3 C41 8.9 42 10.5 42 12.5 V14 Z"
+                  />
+                  <circle cx="11" cy="15" r="4" />
+                  <circle cx="33" cy="15" r="4" /></svg
+              ></span>
+              <span class="direction-end"
+                ><svg class="pictogram" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                  <path
+                    d="M24 2C25.7 2 27 4.5 27 8V18L45 29V33L27 28V38L32 42V45L24 43L16 45V42L21 38V28L3 33V29L21 18V8C21 4.5 22.3 2 24 2Z"
+                  /></svg
+                >Aerodrom</span
+              >
+            </div>
+            <div class="direction-panel" data-way-panel="to">
+              <h3>Na aerodrom</h3>
+
+              <ol class="steps">
+                <li>
+                  <h4>Pošaljite detalje</h4>
+                  <p>Datum, vreme leta, adresu i broj putnika. Može poziv, WhatsApp ili Viber.</p>
+                </li>
+                <li>
+                  <h4>Dobijate potvrdu</h4>
+                  <p>Javljam cenu i vreme polaska, računajući gužvu i vreme za prijavu na let.</p>
+                </li>
+                <li>
+                  <h4>Dolazim po vas</h4>
+                  <p>Na adresu, u dogovoreno vreme. Prtljag ide u prtljažnik, vi na svoje mesto.</p>
+                </li>
+                <li>
+                  <h4>Stižete na terminal</h4>
+                  <p>Vozim vas do ulaza u terminal za polaske.</p>
+                </li>
+              </ol>
+            </div>
+            <div class="direction-panel" data-way-panel="from">
+              <h3>Sa aerodroma</h3>
+
+              <ol class="steps">
+                <li>
+                  <h4>Pošaljite broj leta</h4>
+                  <p>Uz datum, adresu i broj putnika.</p>
+                </li>
+                <li>
+                  <h4>Pratim vaš let</h4>
+                  <p>Polazak prilagođavam sletanju, pa ne brinete ako avion kasni.</p>
+                </li>
+                <li>
+                  <h4>Čekam vas na dolascima</h4>
+                  <p>Javite se kad preuzmete prtljag i nalazimo se ispred izlaza.</p>
+                </li>
+                <li>
+                  <h4>Vozim vas do vrata</h4>
+                  <p>Do adrese u Novom Sadu ili okolini.</p>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
