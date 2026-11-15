@@ -1,0 +1,51 @@
+/* The sign is the site's one recurring component: a plate in a road-class
+   colour with a border line set in from its edge, as on the roadside. Its
+   size follows its font-size, so one sign scales as a whole. */
+.sign {
+  --plate: var(--green);
+  --mark: var(--white);
+  --rim: 0.16em;
+  --border: 0.12em;
+  position: relative;
+  border-radius: 0.5em;
+  background: var(--plate);
+  color: var(--mark);
+  box-shadow:
+    inset 0 0 0 var(--rim) var(--plate),
+    inset 0 0 0 calc(var(--rim) + var(--border)) var(--mark),
+    0 0.06em 0 rgb(20 24 26 / 0.25),
+    0 0.5em 0.9em -0.5em rgb(20 24 26 / 0.45);
+  font-family: var(--display);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.sign-yellow {
+  --plate: var(--amber);
+  --mark: var(--ink);
+}
+
+.sign-white {
+  --plate: var(--white);
+  --mark: var(--ink);
+}
+
+.sign-brown {
+  --plate: var(--brown);
+}
+
+.sign-blue {
+  --plate: var(--blue);
+}
+
+.sign .pictogram {
+  width: 1em;
+  height: 1em;
+  flex: none;
+  fill: currentColor;
+}
+
+/* A post holds a sign up. The element is the pole; the sign sits on top of it. */
+.post {
+  background: linear-gradient(90deg, #858d90, #c5cbcd 45%, #7b8386);
+}

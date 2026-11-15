@@ -1,0 +1,342 @@
+/* Sofia Sans, self-hosted. Each file is one subset of a variable font, so the
+   browser fetches only the ranges a page actually uses. */
+@font-face {
+  font-family: "Sofia Sans";
+  font-style: normal;
+  font-weight: 1 1000;
+  font-display: swap;
+  src: url("../fonts/sofia-sans-latin.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Sofia Sans";
+  font-style: normal;
+  font-weight: 1 1000;
+  font-display: swap;
+  src: url("../fonts/sofia-sans-latin-ext.woff2") format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
+    U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Sofia Sans Extra Condensed";
+  font-style: normal;
+  font-weight: 1 1000;
+  font-display: swap;
+  src: url("../fonts/sofia-sans-extra-condensed-latin.woff2") format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Sofia Sans Extra Condensed";
+  font-style: normal;
+  font-weight: 1 1000;
+  font-display: swap;
+  src: url("../fonts/sofia-sans-extra-condensed-latin-ext.woff2") format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329,
+    U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F,
+    U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Sofia Sans Extra Condensed";
+  font-style: normal;
+  font-weight: 1 1000;
+  font-display: swap;
+  src: url("../fonts/sofia-sans-extra-condensed-cyrillic.woff2") format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+:root {
+  /* The road-sign family. A sign sets one of these as its plate and takes the
+     ink that reads on it. */
+  --green: #0b6b4a;
+  --green-deep: #083d2b;
+  --blue: #1d4f91;
+  --brown: #6f4526;
+  --amber: #ffb81a;
+  --white: #ffffff;
+
+  --asphalt: #1f2427;
+  --asphalt-soft: #30373b;
+  --ink: #14181a;
+  --ink-soft: #4b5458;
+  --paper: #f5f6f2;
+  --paper-deep: #e8ebe3;
+  --rule: #d3d8ce;
+  --steel: #9aa2a5;
+
+  /* What a focus ring is drawn in; a dark surface swaps it for one that shows there. */
+  --focus: var(--ink);
+
+  --display: "Sofia Sans Extra Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --text: "Sofia Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --size-small: clamp(0.875rem, 0.85rem + 0.12vw, 0.9375rem);
+  --size-body: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem);
+  --size-lead: clamp(1.25rem, 1.12rem + 0.6vw, 1.5625rem);
+  --size-title: clamp(1.75rem, 1.45rem + 1.3vw, 2.5rem);
+  --size-heading: clamp(2.875rem, 1.7rem + 5vw, 5.5rem);
+  --size-hero: clamp(4rem, 12.6vw, 10.75rem);
+  --size-hero-long: clamp(3.25rem, 10.2vw, 8.5rem);
+
+  --wrap: 76rem;
+  --gutter: clamp(1.25rem, 0.4rem + 3.6vw, 3rem);
+  --section: clamp(4.5rem, 2.8rem + 7vw, 9rem);
+  --radius: 0.75rem;
+
+  --header-height: 4.25rem;
+  --trip-height: 1.75rem;
+
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-arrive: cubic-bezier(0.16, 0.84, 0.3, 1);
+
+  /* Low to high, so the order is the system: the dock sits over the page, the
+     header over what scrolls under it, the skip link over everything. */
+  --z-dock: 10;
+  --z-header: 20;
+  --z-skip: 100;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-height) + var(--trip-height) + 1rem);
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--text);
+  font-size: var(--size-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+dl,
+dd,
+figure,
+fieldset {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+fieldset {
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+/* Browsers hand form controls a font of their own; this is the one rule that undoes it. */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--display);
+  font-weight: 800;
+  line-height: 0.95;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
+svg {
+  display: block;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 0.25rem;
+}
+
+::selection {
+  background: var(--amber);
+  color: var(--ink);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.icon {
+  width: 1.25em;
+  height: 1.25em;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  min-height: 3.25rem;
+  padding: 0.7em 1.35em;
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  background: transparent;
+  font-weight: 700;
+  line-height: 1.15;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 0.18s var(--ease),
+    border-color 0.18s var(--ease),
+    color 0.18s var(--ease),
+    translate 0.18s var(--ease);
+}
+
+.btn:active {
+  translate: 0 1px;
+}
+
+.btn-primary {
+  background: var(--amber);
+  color: var(--ink);
+}
+
+.btn-primary:hover {
+  background: #ffc84a;
+}
+
+.btn-outline {
+  border-color: currentColor;
+}
+
+.btn-outline:hover {
+  background: color-mix(in srgb, currentColor 9%, transparent);
+}
+
+/* The arrow on a primary button blinks like an indicator while the button is
+   hovered or focused: the one place amber moves on its own. */
+.btn .icon-arrow {
+  transition: translate 0.2s var(--ease);
+}
+
+.btn:hover .icon-arrow,
+.btn:focus-visible .icon-arrow {
+  translate: 0.2em 0;
+  animation: blink 0.9s steps(2, jump-none) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.25;
+  }
+}
+
+/* A count with a button either side of it. */
+.stepper {
+  display: grid;
+  grid-template-columns: auto minmax(2.75rem, auto) auto;
+  justify-content: start;
+  align-items: center;
+  gap: 0.35rem 0.25rem;
+}
+
+.stepper-label {
+  grid-column: 1 / -1;
+  font-size: var(--size-small);
+  font-weight: 700;
+}
+
+.stepper button {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid currentColor;
+  border-radius: var(--radius);
+  background: transparent;
+  cursor: pointer;
+}
+
+.stepper button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.stepper output {
+  font-family: var(--display);
+  font-size: 2.25rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.01ms !important;
+  }
+}

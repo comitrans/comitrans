@@ -1,0 +1,51 @@
+.wrap {
+  width: min(100% - 2 * var(--gutter), var(--wrap));
+  margin-inline: auto;
+}
+
+.skip {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: var(--z-skip);
+  padding: 0.6em 1em;
+  border-radius: var(--radius);
+  background: var(--ink);
+  color: var(--white);
+  font-weight: 700;
+  translate: 0 -200%;
+}
+
+.skip:focus {
+  translate: 0 0;
+}
+
+.section {
+  padding-block: var(--section);
+}
+
+.section-head {
+  max-width: 46rem;
+  margin-bottom: clamp(2.25rem, 1.6rem + 2.6vw, 4rem);
+}
+
+.section-head h2 {
+  font-size: var(--size-heading);
+}
+
+.section-head p {
+  margin-top: 0.9em;
+  font-size: var(--size-lead);
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+
+.on-asphalt {
+  --focus: var(--amber);
+  background: var(--asphalt);
+  color: var(--white);
+}
+
+.on-asphalt .section-head p {
+  color: #c4cbce;
+}

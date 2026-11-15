@@ -10,6 +10,17 @@ const POLICY = [
   "form-action 'none'",
 ].join("; ");
 
+// Link order is the cascade: a partial joins this list where its rules belong.
+const STYLES = ["01-base", "02-layout", "03-signs"];
+
+// The subsets every page draws from on first paint.
+const FONTS = [
+  "sofia-sans-extra-condensed-latin",
+  "sofia-sans-extra-condensed-latin-ext",
+  "sofia-sans-latin",
+  "sofia-sans-latin-ext",
+];
+
 const pageUrl = (site, locale) => `${site.origin}/${locale.path}`;
 
 function alternates({ site }) {
@@ -61,8 +72,8 @@ function indexing(context) {
   `;
 }
 
-export function page(context, { title, description, body, indexed = true }) {
-  const { site, locale } = context;
+export function page(context, { title, description, body, indexed = true, styles = [] }) {
+  const { site, locale, root } = context;
   return html`<!doctype html>
     <html lang="${locale.lang}">
       <head>
@@ -70,10 +81,24 @@ export function page(context, { title, description, body, indexed = true }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta http-equiv="Content-Security-Policy" content="${POLICY}" />
         <meta name="color-scheme" content="light" />
+        <meta name="theme-color" content="#f5f6f2" />
         <title>${title}</title>
         <meta name="description" content="${description}" />
         ${site.launched && indexed ? null : html`<meta name="robots" content="noindex" />`}
         ${indexed ? indexing(context) : null}
+        ${FONTS.map(
+          (font) =>
+            html`<link
+              rel="preload"
+              as="font"
+              type="font/woff2"
+              href="${root}fonts/${font}.woff2"
+              crossorigin
+            />`,
+        )}
+        ${[...STYLES, ...styles].map(
+          (name) => html`<link rel="stylesheet" href="${root}css/${name}.css" />`,
+        )}
       </head>
       <body>
         ${body}
