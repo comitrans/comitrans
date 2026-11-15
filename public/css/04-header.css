@@ -1,0 +1,325 @@
+.preview {
+  padding: 0.4rem var(--gutter);
+  background: var(--asphalt);
+  color: var(--white);
+  font-size: var(--size-small);
+  text-align: center;
+}
+
+.site-header {
+  z-index: var(--z-header);
+  background: var(--paper);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 0.2rem + 1.8vw, 2rem);
+  min-height: var(--header-height);
+}
+
+.wordmark {
+  border-radius: 0.5em;
+  font-size: clamp(1.5rem, 1.35rem + 0.6vw, 1.875rem);
+  text-decoration: none;
+}
+
+.wordmark .sign {
+  display: block;
+  padding: 0.38em 0.6em 0.26em;
+  font-weight: 800;
+  letter-spacing: 0.015em;
+}
+
+/* The accent on the ć is drawn rather than typed, so it can be a lane dash in amber. */
+.wordmark-c {
+  position: relative;
+}
+
+.wordmark-c::after {
+  content: "";
+  position: absolute;
+  left: 0.11em;
+  top: 0.12em;
+  width: 0.3em;
+  height: 0.09em;
+  border-radius: 1em;
+  background: var(--amber);
+  rotate: -40deg;
+}
+
+.site-nav {
+  margin-left: auto;
+}
+
+.site-nav ul {
+  display: flex;
+  gap: clamp(1rem, 0.2rem + 1.6vw, 2.25rem);
+}
+
+.site-nav a {
+  display: block;
+  padding: 0.35em 0;
+  border-bottom: 2px solid transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.18s var(--ease);
+}
+
+.site-nav a:hover {
+  border-color: currentColor;
+}
+
+.lang {
+  display: flex;
+  gap: 0.15rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+.lang a {
+  padding: 0.35em 0.6em;
+  border-radius: 0.4em;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.lang a:hover {
+  color: var(--ink);
+}
+
+.lang a[aria-current] {
+  background: var(--paper-deep);
+  color: var(--ink);
+}
+
+.site-header .btn {
+  min-height: 2.75rem;
+  padding: 0.45em 1.1em;
+  font-size: 1rem;
+}
+
+.hint {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem 1rem;
+  padding: 0.5rem var(--gutter);
+  background: var(--paper-deep);
+  font-size: var(--size-small);
+}
+
+.hint a {
+  font-weight: 700;
+}
+
+.hint button {
+  padding: 0.1em 0.5em;
+  border: 0;
+  background: none;
+  color: var(--ink-soft);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* The trip line: the page's scroll position drawn as a drive from the first
+   stop to the last. --trip runs from 0 to 1 and is written by the script. */
+.trip {
+  --trip: 0;
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+  overflow-x: clip;
+}
+
+.trip .wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  height: var(--trip-height);
+}
+
+.trip-end {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  color: var(--ink-soft);
+  font-family: var(--display);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+.trip-end svg {
+  width: 0.95em;
+  height: 0.95em;
+  fill: currentColor;
+  rotate: 45deg;
+  transition:
+    translate 0.9s var(--ease),
+    opacity 0.9s var(--ease);
+}
+
+.trip.is-arrived .trip-end svg {
+  translate: 0.9em -0.9em;
+  opacity: 0;
+}
+
+.trip-track {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  margin-inline: 0.9rem;
+}
+
+.trip-road,
+.trip-done {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  margin-top: -1px;
+  background: var(--rule);
+}
+
+.trip-done {
+  background: var(--green);
+  transform-origin: 0 50%;
+  scale: var(--trip) 1;
+}
+
+.trip-stops {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  stroke: var(--steel);
+  stroke-width: 2;
+}
+
+/* The car is placed along the track rather than translated across it: a box
+   moved sideways by a transform still widens what the page can scroll to. */
+.trip-car {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--trip) * 100%);
+  pointer-events: none;
+}
+
+.trip-car svg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1.875rem;
+  fill: var(--ink);
+  translate: -50% -62%;
+}
+
+.trip-label {
+  position: absolute;
+  top: 50%;
+  left: 1.25rem;
+  padding: 0 0.4em;
+  background: var(--paper);
+  color: var(--ink-soft);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  translate: 0 -50%;
+}
+
+.trip.is-late .trip-label {
+  right: 1.25rem;
+  left: auto;
+}
+
+.trip-label:empty {
+  display: none;
+}
+
+.dock {
+  --focus: var(--white);
+  position: fixed;
+  inset: auto 0 0;
+  z-index: var(--z-dock);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-bottom: env(safe-area-inset-bottom);
+  background: var(--asphalt);
+  color: var(--white);
+  transition: translate 0.25s var(--ease);
+}
+
+.dock.is-away {
+  translate: 0 110%;
+}
+
+.dock a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45em;
+  min-height: 3.5rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.dock a + a {
+  border-left: 1px solid rgb(255 255 255 / 0.16);
+}
+
+.dock a:first-child {
+  --focus: var(--ink);
+  background: var(--amber);
+  color: var(--ink);
+}
+
+.dock a:focus-visible {
+  outline-offset: -4px;
+}
+
+@media (max-width: 47.99rem) {
+  .site-header .btn {
+    display: none;
+  }
+
+  .lang {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 61.99rem) {
+  .site-nav {
+    display: none;
+  }
+
+  .lang {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 48rem) {
+  .dock {
+    display: none;
+  }
+}
+
+@media (min-width: 62rem) {
+  .site-header {
+    position: sticky;
+    top: 0;
+  }
+
+  .trip {
+    top: var(--header-height);
+  }
+}

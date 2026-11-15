@@ -62,11 +62,11 @@
     "route": "beg",
     "stops": [
       { "id": "novi-sad", "km": 0 },
-      { "id": "kovilj", "km": 15 },
-      { "id": "beska", "km": 32 },
-      { "id": "indjija", "km": 42 },
-      { "id": "stara-pazova", "km": 52 },
-      { "id": "batajnica", "km": 63 },
+      { "id": "kovilj", "km": 16 },
+      { "id": "beska", "km": 29 },
+      { "id": "indjija", "km": 38 },
+      { "id": "stara-pazova", "km": 48 },
+      { "id": "batajnica", "km": 57 },
       { "id": "airport", "km": 80 }
     ]
   }

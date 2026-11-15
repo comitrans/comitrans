@@ -79,8 +79,99 @@
     <link rel="stylesheet" href="../css/01-base.css" />
     <link rel="stylesheet" href="../css/02-layout.css" />
     <link rel="stylesheet" href="../css/03-signs.css" />
+    <link rel="stylesheet" href="../css/04-header.css" />
+    <script type="module" src="../js/main.js"></script>
   </head>
   <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <p class="preview">Preview: the details on this page are not confirmed yet.</p>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="wordmark" href="#top" aria-label="Ćomitrans, top of the page">
+          <span class="sign" aria-hidden="true"><span class="wordmark-c">c</span>omitrans</span>
+        </a>
+        <nav class="site-nav" aria-label="Page sections">
+          <ul>
+            <li><a href="#airport">Airport</a></li>
+            <li><a href="#routes">Routes</a></li>
+            <li><a href="#rides">Other rides</a></li>
+            <li><a href="#vehicle">Vehicle</a></li>
+            <li><a href="#questions">Questions</a></li>
+          </ul>
+        </nav>
+        <div class="lang" role="group" aria-label="Language">
+          <a href="../" lang="sr-Latn" hreflang="sr"
+            >SR<span class="visually-hidden"> Srpski</span></a
+          ><a href="../en/" lang="en" hreflang="en" aria-current="page"
+            >EN<span class="visually-hidden"> English</span></a
+          >
+        </div>
+        <a class="btn btn-primary" href="#booking">Book a ride</a>
+      </div>
+    </header>
+
+    <div
+      class="trip"
+      aria-hidden="true"
+      data-trip
+      data-stops='[{"name":"Novi Sad","km":0},{"name":"Kovilj","km":16},{"name":"Beška","km":29},{"name":"Inđija","km":38},{"name":"Stara Pazova","km":48},{"name":"Batajnica","km":57},{"name":"Airport","km":80}]'
+      data-unit="km"
+    >
+      <div class="wrap">
+        <span class="trip-end">NS</span>
+        <div class="trip-track">
+          <span class="trip-road"></span>
+          <span class="trip-done"></span>
+          <svg class="trip-stops" viewBox="0 0 80 10" preserveAspectRatio="none">
+            <line x1="16" x2="16" y1="3.4" y2="6.6" vector-effect="non-scaling-stroke" />
+            <line x1="29" x2="29" y1="3.4" y2="6.6" vector-effect="non-scaling-stroke" />
+            <line x1="38" x2="38" y1="3.4" y2="6.6" vector-effect="non-scaling-stroke" />
+            <line x1="48" x2="48" y1="3.4" y2="6.6" vector-effect="non-scaling-stroke" />
+            <line x1="57" x2="57" y1="3.4" y2="6.6" vector-effect="non-scaling-stroke" />
+          </svg>
+          <span class="trip-car"
+            ><svg viewBox="0 0 44 20" aria-hidden="true" focusable="false">
+              <path
+                d="M2 14 L2.5 9 C3 6.5 5 3.5 9 3 L24 2.6 C27.5 2.8 30 4.5 32.5 7.2 L38.5 8.3 C41 8.9 42 10.5 42 12.5 V14 Z"
+              />
+              <circle cx="11" cy="15" r="4" />
+              <circle cx="33" cy="15" r="4" /></svg
+            ><span class="trip-label" data-trip-label></span
+          ></span>
+        </div>
+        <span class="trip-end"
+          ><svg class="pictogram" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+            <path
+              d="M24 2C25.7 2 27 4.5 27 8V18L45 29V33L27 28V38L32 42V45L24 43L16 45V42L21 38V28L3 33V29L21 18V8C21 4.5 22.3 2 24 2Z"
+            /></svg
+          >BEG</span
+        >
+      </div>
+    </div>
+
     <main id="main"></main>
+
+    <nav class="dock" aria-label="Quick contact" data-dock>
+      <a href="tel:+381600000000"
+        ><svg class="icon icon-phone" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path
+            d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16.5 16.5 0 0 1 4.5 5.5a2 2 0 0 1 2-2z"
+          /></svg
+        >Call</a
+      >
+      <a href="https://wa.me/381600000000"
+        ><svg class="icon icon-chat" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4 5h16v11H10l-5 4v-4H4z" /></svg
+        >WhatsApp</a
+      >
+      <a href="viber://chat?number=%2B381600000000"
+        ><svg class="icon icon-bubble" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path
+            d="M12 4a8 7.5 0 0 1 0 15c-1 0-2-.15-2.9-.4L5 20.5l.9-3.3A7.4 7.4 0 0 1 4 11.5 8 7.5 0 0 1 12 4z"
+          /></svg
+        >Viber</a
+      >
+    </nav>
   </body>
 </html>
