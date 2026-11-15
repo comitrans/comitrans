@@ -12,16 +12,10 @@
   margin-bottom: 2rem;
 }
 
-/* Until the script picks one, both notes read as a paragraph. */
 .seats-note {
   max-width: 31rem;
   margin-top: 1.25rem;
   color: var(--ink-soft);
-}
-
-.seats-note[data-state="roomy"] [data-seats-full],
-.seats-note[data-state="full"] [data-seats-roomy] {
-  display: none;
 }
 
 .seatmap {
@@ -47,11 +41,6 @@
 
 .cabin-boot {
   fill: #e4e7df;
-}
-
-.cabin-boot-more {
-  opacity: 0;
-  transition: opacity 0.3s var(--ease);
 }
 
 .cabin-label {
@@ -80,8 +69,7 @@
   stroke-width: 2.5;
   transition:
     fill 0.25s var(--ease),
-    stroke 0.25s var(--ease),
-    opacity 0.25s var(--ease);
+    stroke 0.25s var(--ease);
 }
 
 .seat.is-taken {
@@ -92,14 +80,6 @@
 .seat-driver {
   fill: var(--ink);
   stroke: var(--ink);
-}
-
-.seatmap.is-roomy .cabin-boot-more {
-  opacity: 1;
-}
-
-.seatmap.is-roomy .seat-folding {
-  opacity: 0;
 }
 
 @media (min-width: 60rem) {

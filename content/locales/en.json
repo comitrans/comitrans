@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Novi Sad airport transfers | Ćomitrans",
-    "description": "Private transfers from Novi Sad to Belgrade, Budapest, Timișoara, Osijek and Zagreb airports. A Ford Galaxy for up to six passengers, from your door to the terminal.",
+    "description": "Private transfers from Novi Sad to Belgrade, Budapest, Timișoara, Osijek and Zagreb airports. A Ford Galaxy for up to four passengers, from your door to the terminal.",
     "ogTitle": "Ćomitrans: from your door to the airport",
     "ogAlt": "Ćomitrans, airport transfers from Novi Sad: a green road sign for Belgrade Airport above a car on the road."
   },
@@ -159,14 +159,12 @@
     }
   },
   "vehicle": {
-    "title": "Ford Galaxy: seven seats, six of them yours",
-    "lead": "One seat is mine, the other six are yours. Pick how many of you are travelling and see where you sit.",
+    "title": "Ford Galaxy: four comfortable seats for you",
+    "lead": "One seat is mine, the other four are yours. Pick how many of you are travelling and see where you sit.",
     "passengers": "Passengers",
     "fewer": "One passenger fewer",
     "more": "One more passenger",
-    "status": "Passengers: {count}",
-    "roomy": "Up to four passengers: the third row is folded, so the boot is large.",
-    "full": "Five or six: the third row is in use, so the boot is smaller. Tell me how many suitcases you are bringing.",
+    "note": "The boot is large. If you are bringing more than the usual luggage, let me know in advance.",
     "driver": "Ćomi",
     "boot": "Boot",
     "map": "Seat layout of the vehicle"
@@ -196,7 +194,7 @@
       },
       {
         "q": "How much luggage fits?",
-        "a": "It depends on how many of you there are. With up to four passengers the boot is large. With five or six it holds less, so tell me in advance how many suitcases you are bringing."
+        "a": "The boot is large. If you are bringing more than the usual luggage, let me know in advance."
       },
       {
         "q": "How do I pay?",

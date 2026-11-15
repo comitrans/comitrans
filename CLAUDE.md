@@ -23,7 +23,7 @@ Guidance for AI agents working in this repo. Read [README.md](README.md) first: 
 - A page carries no `style` attribute and no `<style>` element: the policy would drop them, and a test fails first. Geometry inside an SVG goes in attributes; a script may still set a custom property through the CSSOM.
 - A section of the page is one module under `templates/sections/`, one stylesheet partial and, where it needs one, one script. It joins three lists, each in the order that matters there: the body in [templates/pages/home.js](templates/pages/home.js) (order on the page), `STYLES` in `templates/document.js` (the cascade), and [public/js/main.js](public/js/main.js) (the order the scripts start in).
 - Every word is in `content/locales/`, every language-independent fact in `content/site.json`. Section ids are words too (`anchors`), so a link to a section is written `#${t.anchors.booking}`. A string a script needs travels in the page, as a data attribute or in the composer's JSON block, never as a literal in the module.
-- What only works with JavaScript ships `hidden` and is revealed by its script. What the page says without it has to stand on its own: both directions of the airport steps, both seat notes, the plain contact links.
+- What only works with JavaScript ships `hidden` and is revealed by its script. What the page says without it has to stand on its own: both directions of the airport steps and the plain contact links.
 
 ## Stylesheet
 

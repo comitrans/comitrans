@@ -3,7 +3,6 @@
   "origin": "https://comitrans.net",
   "launched": false,
   "todo": [
-    "vehicle: confirm the seat and luggage notes",
     "booking: test the Viber button on a real phone"
   ],
   "locales": [
@@ -44,7 +43,7 @@
     "email": { "user": "info", "domain": "comitrans.net" }
   },
   "business": null,
-  "vehicle": { "make": "Ford", "model": "Galaxy", "passengers": 6, "roomyUpTo": 4, "luggageMax": 8 },
+  "vehicle": { "make": "Ford", "model": "Galaxy", "passengers": 4, "luggageMax": 6 },
   "heroPhoto": null,
   "routes": [
     { "id": "beg", "code": "BEG", "km": 80, "minutes": 60, "border": false, "price": null },

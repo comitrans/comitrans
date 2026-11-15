@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Prevoz do aerodroma iz Novog Sada | Ćomitrans",
-    "description": "Privatni prevoz iz Novog Sada do aerodroma u Beogradu, Budimpešti, Temišvaru, Osijeku i Zagrebu. Ford Galaxy, do šest putnika, od vaših vrata do terminala.",
+    "description": "Privatni prevoz iz Novog Sada do aerodroma u Beogradu, Budimpešti, Temišvaru, Osijeku i Zagrebu. Ford Galaxy, do četiri putnika, od vaših vrata do terminala.",
     "ogTitle": "Ćomitrans: od vrata do aerodroma",
     "ogAlt": "Ćomitrans, prevoz do aerodroma iz Novog Sada: zeleni putokaz za aerodrom Beograd iznad vozila na putu."
   },
@@ -159,14 +159,12 @@
     }
   },
   "vehicle": {
-    "title": "Ford Galaxy: sedam sedišta, šest za vas",
-    "lead": "Jedno sedište je moje, ostalih šest su vaša. Izaberite koliko vas putuje i vidite gde sedite.",
+    "title": "Ford Galaxy: četiri udobna sedišta za vas",
+    "lead": "Jedno sedište je moje, ostala četiri su vaša. Izaberite koliko vas putuje i vidite gde sedite.",
     "passengers": "Broj putnika",
     "fewer": "Jedan putnik manje",
     "more": "Jedan putnik više",
-    "status": "Putnika: {count}",
-    "roomy": "Do četiri putnika: treći red je spušten, pa je prtljažnik veliki.",
-    "full": "Petoro ili šestoro: sedi se i u trećem redu, pa je prtljažnik manji. Javite koliko kofera nosite.",
+    "note": "Prtljažnik je veliki. Ukoliko imate više od uobičajenog prtljaga, javite unapred.",
     "driver": "Ćomi",
     "boot": "Prtljažnik",
     "map": "Raspored sedišta u vozilu"
@@ -196,7 +194,7 @@
       },
       {
         "q": "Koliko prtljaga staje?",
-        "a": "Zavisi od toga koliko vas putuje. Do četiri putnika prtljažnik je veliki. Sa petoro ili šestoro staje manje, pa javite unapred koliko kofera nosite."
+        "a": "Prtljažnik je veliki. Ukoliko imate više od uobičajenog prtljaga, javite unapred."
       },
       {
         "q": "Kako se plaća?",
