@@ -1,0 +1,204 @@
+.booking {
+  --focus: var(--white);
+  background: var(--green);
+  color: var(--white);
+}
+
+.booking .section-head p {
+  color: #d5e6de;
+}
+
+.composer {
+  display: grid;
+  gap: 2rem;
+}
+
+.composer-form {
+  --focus: var(--ink);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 1.15rem 1rem;
+  padding: clamp(1.25rem, 0.6rem + 2.6vw, 2.25rem);
+  border-radius: calc(var(--radius) * 1.5);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.field-wide {
+  grid-column: 1 / -1;
+}
+
+.field-label {
+  padding: 0;
+  font-size: var(--size-small);
+  font-weight: 700;
+}
+
+.field-label small {
+  color: var(--ink-soft);
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.55em 0.8em;
+  border: 2px solid #7b8386;
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible {
+  border-color: var(--ink);
+  outline-offset: 1px;
+  border-radius: var(--radius);
+}
+
+.field input::placeholder {
+  color: #7b8386;
+}
+
+/* Two radios drawn as one switch: the input is the control, the span its face. */
+.segmented {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.35rem 0;
+}
+
+.segmented legend {
+  grid-column: 1 / -1;
+  margin-bottom: 0.35rem;
+}
+
+.segmented label {
+  position: relative;
+  display: block;
+}
+
+.segmented input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  min-height: 0;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.segmented span {
+  display: grid;
+  place-items: center;
+  min-height: 3rem;
+  padding: 0.4em 0.6em;
+  border: 2px solid #7b8386;
+  background: var(--white);
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.segmented label:first-of-type span {
+  border-right-width: 1px;
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.segmented label:last-of-type span {
+  border-left-width: 1px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.segmented input:checked + span {
+  border-color: var(--green);
+  background: var(--green);
+  color: var(--white);
+}
+
+.segmented input:focus-visible + span {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.composer-side {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.composer-preview h3 {
+  margin-bottom: 0.6rem;
+  font-family: var(--text);
+  font-size: var(--size-small);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.composer-message {
+  padding: 1rem 1.2rem;
+  border-radius: 1.2rem 1.2rem 1.2rem 0.3rem;
+  background: var(--white);
+  color: var(--ink);
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.composer-send {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.composer-call a {
+  margin-left: 0.2em;
+  font-size: 1.2em;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.composer-status:empty {
+  display: none;
+}
+
+.composer-status {
+  font-weight: 700;
+}
+
+.composer-privacy,
+.composer-noscript {
+  color: #d5e6de;
+  font-size: var(--size-small);
+}
+
+@media (max-width: 29.99rem) {
+  .composer-form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (min-width: 62rem) {
+  .composer {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 3rem;
+  }
+
+  .composer-side {
+    position: sticky;
+    top: calc(var(--header-height) + var(--trip-height) + 1.5rem);
+  }
+}

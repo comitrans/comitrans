@@ -254,7 +254,7 @@
       "greeting": "Hello Ćomi, I would like to book a ride.",
       "subject": "Ride",
       "base": "Novi Sad",
-      "airport": "Airport",
+      "airport": "{city} Airport",
       "route": "Route",
       "when": "Date and time",
       "date": "{d} {month} {y}",

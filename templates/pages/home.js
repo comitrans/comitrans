@@ -2,6 +2,7 @@ import { html } from "../html.js";
 import { page } from "../document.js";
 import { about, faq } from "../sections/about.js";
 import { airport } from "../sections/airport.js";
+import { booking } from "../sections/booking.js";
 import { dock } from "../sections/dock.js";
 import { header, trip } from "../sections/header.js";
 import { hero } from "../sections/hero.js";
@@ -19,7 +20,7 @@ export function home(context) {
       ${header(context)} ${trip(context)}
       <main id="main">
         ${hero(context)} ${airport(context)} ${routes(context)} ${rides(context)}
-        ${vehicle(context)} ${about(context)} ${faq(context)}
+        ${vehicle(context)} ${about(context)} ${faq(context)} ${booking(context)}
       </main>
       ${dock(context)}
     `,

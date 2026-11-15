@@ -86,6 +86,7 @@
     <link rel="stylesheet" href="css/08-rides.css" />
     <link rel="stylesheet" href="css/09-vehicle.css" />
     <link rel="stylesheet" href="css/10-about.css" />
+    <link rel="stylesheet" href="css/11-booking.css" />
     <script type="module" src="js/main.js"></script>
   </head>
   <body>
@@ -850,6 +851,273 @@
               </p>
             </details>
           </div>
+        </div>
+      </section>
+
+      <section class="section booking" id="zakazivanje" data-dock-yields>
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Zakažite vožnju</h2>
+            <p>
+              Popunite ono što znate. Poruka se sastavlja dok kucate, a vi birate kako ćete je
+              poslati.
+            </p>
+          </div>
+          <div class="composer">
+            <form class="composer-form" data-composer novalidate hidden>
+              <label class="field">
+                <span class="field-label">Relacija</span>
+                <select name="route">
+                  <option value="beg">Aerodrom Beograd (BEG)</option>
+                  <option value="osi">Aerodrom Osijek (OSI)</option>
+                  <option value="tsr">Aerodrom Temišvar (TSR)</option>
+                  <option value="bud">Aerodrom Budimpešta (BUD)</option>
+                  <option value="zag">Aerodrom Zagreb (ZAG)</option>
+                  <option value="other">Druga relacija</option>
+                </select>
+              </label>
+
+              <fieldset class="field segmented" data-only="airport">
+                <legend class="field-label">Smer</legend>
+                <label
+                  ><input type="radio" name="direction" value="to" checked /><span
+                    >Na aerodrom</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="direction" value="from" /><span
+                    >Sa aerodroma</span
+                  ></label
+                >
+              </fieldset>
+
+              <label class="field">
+                <span class="field-label">Datum</span>
+                <input type="date" name="date" />
+              </label>
+
+              <label class="field">
+                <span class="field-label">Vreme <small>Vreme leta ili željeni polazak</small></span>
+                <input type="time" name="time" />
+              </label>
+
+              <label class="field field-wide">
+                <span class="field-label">Adresa</span>
+                <input
+                  type="text"
+                  name="address"
+                  autocomplete="street-address"
+                  placeholder="Ulica i broj, mesto"
+                />
+              </label>
+
+              <label class="field field-wide" data-only="other">
+                <span class="field-label">Odredište</span>
+                <input type="text" name="destination" />
+              </label>
+
+              <div
+                class="stepper"
+                role="group"
+                aria-label="Putnika"
+                data-stepper="passengers"
+                data-min="1"
+                data-max="6"
+                hidden
+              >
+                <span class="stepper-label">Putnika</span>
+                <button type="button" data-step="-1" aria-label="Manje">
+                  <svg
+                    class="icon icon-minus"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M6 12h12" />
+                  </svg>
+                </button>
+                <output data-stepper-value>1</output>
+                <button type="button" data-step="1" aria-label="Više">
+                  <svg
+                    class="icon icon-plus"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M12 6v12M6 12h12" />
+                  </svg>
+                </button>
+              </div>
+
+              <div
+                class="stepper"
+                role="group"
+                aria-label="Kofera"
+                data-stepper="luggage"
+                data-min="0"
+                data-max="8"
+                hidden
+              >
+                <span class="stepper-label">Kofera</span>
+                <button type="button" data-step="-1" aria-label="Manje">
+                  <svg
+                    class="icon icon-minus"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M6 12h12" />
+                  </svg>
+                </button>
+                <output data-stepper-value>0</output>
+                <button type="button" data-step="1" aria-label="Više">
+                  <svg
+                    class="icon icon-plus"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M12 6v12M6 12h12" />
+                  </svg>
+                </button>
+              </div>
+
+              <label class="field" data-only="airport">
+                <span class="field-label">Broj leta <small>nije obavezno</small></span>
+                <input
+                  type="text"
+                  name="flight"
+                  autocapitalize="characters"
+                  autocomplete="off"
+                  spellcheck="false"
+                />
+              </label>
+
+              <label class="field">
+                <span class="field-label">Ime</span>
+                <input type="text" name="name" autocomplete="name" />
+              </label>
+
+              <label class="field field-wide">
+                <span class="field-label">Napomena <small>nije obavezno</small></span>
+                <textarea name="note" rows="2"></textarea>
+              </label>
+            </form>
+
+            <div class="composer-side">
+              <div class="composer-preview" data-composer-preview hidden>
+                <h3>Vaša poruka</h3>
+                <p class="composer-message" data-composer-message></p>
+              </div>
+              <noscript
+                ><p class="composer-noscript">
+                  Formular radi samo uz JavaScript. Pozovite ili pišite direktno:
+                </p></noscript
+              >
+              <div class="composer-send">
+                <a class="btn btn-primary" href="https://wa.me/381600000000" data-send="whatsapp"
+                  ><svg
+                    class="icon icon-chat"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M4 5h16v11H10l-5 4v-4H4z" /></svg
+                  >Pošaljite na WhatsApp</a
+                >
+                <a
+                  class="btn btn-outline"
+                  href="viber://chat?number=%2B381600000000"
+                  data-send="viber"
+                  ><svg
+                    class="icon icon-bubble"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path
+                      d="M12 4a8 7.5 0 0 1 0 15c-1 0-2-.15-2.9-.4L5 20.5l.9-3.3A7.4 7.4 0 0 1 4 11.5 8 7.5 0 0 1 12 4z"
+                    /></svg
+                  >Pošaljite na Viber</a
+                >
+                <a class="btn btn-outline" data-send="email" hidden
+                  ><svg
+                    class="icon icon-mail"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M3.5 6h17v12h-17zM3.5 7l8.5 6.5L20.5 7" /></svg
+                  >Pošaljite e-poštom</a
+                >
+                <button class="btn btn-outline" type="button" data-send="copy" hidden>
+                  <svg
+                    class="icon icon-copy"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M9 9h10v11H9zM5 15V4h10" /></svg
+                  >Kopirajte poruku
+                </button>
+              </div>
+              <p class="composer-call">ili pozovite <a href="tel:+381600000000">060 000 0000</a></p>
+              <p class="composer-status" role="status" data-composer-status></p>
+              <p class="composer-privacy">
+                Ništa što upišete ne šalje se sa ove strane. Poruka nastaje na vašem uređaju i
+                šaljete je sami.
+              </p>
+            </div>
+          </div>
+          <script type="application/json" data-composer-data>
+            {
+              "strings": {
+                "greeting": "Zdravo Ćomi, želim da zakažem vožnju.",
+                "subject": "Vožnja",
+                "base": "Novi Sad",
+                "airport": "Aerodrom {city}",
+                "route": "Relacija",
+                "when": "Datum i vreme",
+                "date": "{d}.{m}.{y}.",
+                "at": "u",
+                "address": "Adresa",
+                "destination": "Odredište",
+                "passengers": "Putnika",
+                "luggage": "Kofera",
+                "flight": "Broj leta",
+                "name": "Ime",
+                "note": "Napomena",
+                "months": [
+                  "januar",
+                  "februar",
+                  "mart",
+                  "april",
+                  "maj",
+                  "jun",
+                  "jul",
+                  "avgust",
+                  "septembar",
+                  "oktobar",
+                  "novembar",
+                  "decembar"
+                ],
+                "copied": "Poruka je kopirana.",
+                "viber": "Poruka je kopirana. Ako se ne pojavi u Viberu, nalepite je."
+              },
+              "routes": {
+                "beg": "Aerodrom Beograd (BEG)",
+                "osi": "Aerodrom Osijek (OSI)",
+                "tsr": "Aerodrom Temišvar (TSR)",
+                "bud": "Aerodrom Budimpešta (BUD)",
+                "zag": "Aerodrom Zagreb (ZAG)"
+              },
+              "contact": {
+                "whatsapp": "+381600000000",
+                "viber": "+381600000000",
+                "email": ["info", "comitrans.net"]
+              }
+            }
+          </script>
         </div>
       </section>
     </main>

@@ -22,6 +22,7 @@ const STYLES = [
   "08-rides",
   "09-vehicle",
   "10-about",
+  "11-booking",
 ];
 
 // The subsets every page draws from on first paint.

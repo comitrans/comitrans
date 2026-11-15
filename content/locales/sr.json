@@ -254,7 +254,7 @@
       "greeting": "Zdravo Ćomi, želim da zakažem vožnju.",
       "subject": "Vožnja",
       "base": "Novi Sad",
-      "airport": "Aerodrom",
+      "airport": "Aerodrom {city}",
       "route": "Relacija",
       "when": "Datum i vreme",
       "date": "{d}.{m}.{y}.",

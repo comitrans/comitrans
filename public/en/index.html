@@ -86,6 +86,7 @@
     <link rel="stylesheet" href="../css/08-rides.css" />
     <link rel="stylesheet" href="../css/09-vehicle.css" />
     <link rel="stylesheet" href="../css/10-about.css" />
+    <link rel="stylesheet" href="../css/11-booking.css" />
     <script type="module" src="../js/main.js"></script>
   </head>
   <body>
@@ -865,6 +866,273 @@
               </p>
             </details>
           </div>
+        </div>
+      </section>
+
+      <section class="section booking" id="booking" data-dock-yields>
+        <div class="wrap">
+          <div class="section-head">
+            <h2>Book a ride</h2>
+            <p>
+              Fill in what you know. The message writes itself as you type, and you choose how to
+              send it.
+            </p>
+          </div>
+          <div class="composer">
+            <form class="composer-form" data-composer novalidate hidden>
+              <label class="field">
+                <span class="field-label">Route</span>
+                <select name="route">
+                  <option value="beg">Belgrade Airport (BEG)</option>
+                  <option value="osi">Osijek Airport (OSI)</option>
+                  <option value="tsr">Timișoara Airport (TSR)</option>
+                  <option value="bud">Budapest Airport (BUD)</option>
+                  <option value="zag">Zagreb Airport (ZAG)</option>
+                  <option value="other">Another route</option>
+                </select>
+              </label>
+
+              <fieldset class="field segmented" data-only="airport">
+                <legend class="field-label">Direction</legend>
+                <label
+                  ><input type="radio" name="direction" value="to" checked /><span
+                    >To the airport</span
+                  ></label
+                >
+                <label
+                  ><input type="radio" name="direction" value="from" /><span
+                    >From the airport</span
+                  ></label
+                >
+              </fieldset>
+
+              <label class="field">
+                <span class="field-label">Date</span>
+                <input type="date" name="date" />
+              </label>
+
+              <label class="field">
+                <span class="field-label">Time <small>Flight time or preferred pickup</small></span>
+                <input type="time" name="time" />
+              </label>
+
+              <label class="field field-wide">
+                <span class="field-label">Address</span>
+                <input
+                  type="text"
+                  name="address"
+                  autocomplete="street-address"
+                  placeholder="Street and number, town"
+                />
+              </label>
+
+              <label class="field field-wide" data-only="other">
+                <span class="field-label">Destination</span>
+                <input type="text" name="destination" />
+              </label>
+
+              <div
+                class="stepper"
+                role="group"
+                aria-label="Passengers"
+                data-stepper="passengers"
+                data-min="1"
+                data-max="6"
+                hidden
+              >
+                <span class="stepper-label">Passengers</span>
+                <button type="button" data-step="-1" aria-label="Fewer">
+                  <svg
+                    class="icon icon-minus"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M6 12h12" />
+                  </svg>
+                </button>
+                <output data-stepper-value>1</output>
+                <button type="button" data-step="1" aria-label="More">
+                  <svg
+                    class="icon icon-plus"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M12 6v12M6 12h12" />
+                  </svg>
+                </button>
+              </div>
+
+              <div
+                class="stepper"
+                role="group"
+                aria-label="Suitcases"
+                data-stepper="luggage"
+                data-min="0"
+                data-max="8"
+                hidden
+              >
+                <span class="stepper-label">Suitcases</span>
+                <button type="button" data-step="-1" aria-label="Fewer">
+                  <svg
+                    class="icon icon-minus"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M6 12h12" />
+                  </svg>
+                </button>
+                <output data-stepper-value>0</output>
+                <button type="button" data-step="1" aria-label="More">
+                  <svg
+                    class="icon icon-plus"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M12 6v12M6 12h12" />
+                  </svg>
+                </button>
+              </div>
+
+              <label class="field" data-only="airport">
+                <span class="field-label">Flight number <small>optional</small></span>
+                <input
+                  type="text"
+                  name="flight"
+                  autocapitalize="characters"
+                  autocomplete="off"
+                  spellcheck="false"
+                />
+              </label>
+
+              <label class="field">
+                <span class="field-label">Name</span>
+                <input type="text" name="name" autocomplete="name" />
+              </label>
+
+              <label class="field field-wide">
+                <span class="field-label">Note <small>optional</small></span>
+                <textarea name="note" rows="2"></textarea>
+              </label>
+            </form>
+
+            <div class="composer-side">
+              <div class="composer-preview" data-composer-preview hidden>
+                <h3>Your message</h3>
+                <p class="composer-message" data-composer-message></p>
+              </div>
+              <noscript
+                ><p class="composer-noscript">
+                  The form needs JavaScript. You can call or write directly:
+                </p></noscript
+              >
+              <div class="composer-send">
+                <a class="btn btn-primary" href="https://wa.me/381600000000" data-send="whatsapp"
+                  ><svg
+                    class="icon icon-chat"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M4 5h16v11H10l-5 4v-4H4z" /></svg
+                  >Send on WhatsApp</a
+                >
+                <a
+                  class="btn btn-outline"
+                  href="viber://chat?number=%2B381600000000"
+                  data-send="viber"
+                  ><svg
+                    class="icon icon-bubble"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path
+                      d="M12 4a8 7.5 0 0 1 0 15c-1 0-2-.15-2.9-.4L5 20.5l.9-3.3A7.4 7.4 0 0 1 4 11.5 8 7.5 0 0 1 12 4z"
+                    /></svg
+                  >Send on Viber</a
+                >
+                <a class="btn btn-outline" data-send="email" hidden
+                  ><svg
+                    class="icon icon-mail"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M3.5 6h17v12h-17zM3.5 7l8.5 6.5L20.5 7" /></svg
+                  >Send by email</a
+                >
+                <button class="btn btn-outline" type="button" data-send="copy" hidden>
+                  <svg
+                    class="icon icon-copy"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M9 9h10v11H9zM5 15V4h10" /></svg
+                  >Copy the message
+                </button>
+              </div>
+              <p class="composer-call">or call <a href="tel:+381600000000">+381 60 000 0000</a></p>
+              <p class="composer-status" role="status" data-composer-status></p>
+              <p class="composer-privacy">
+                Nothing you type is sent from this page. The message is put together on your device
+                and you send it yourself.
+              </p>
+            </div>
+          </div>
+          <script type="application/json" data-composer-data>
+            {
+              "strings": {
+                "greeting": "Hello Ćomi, I would like to book a ride.",
+                "subject": "Ride",
+                "base": "Novi Sad",
+                "airport": "{city} Airport",
+                "route": "Route",
+                "when": "Date and time",
+                "date": "{d} {month} {y}",
+                "at": "at",
+                "address": "Address",
+                "destination": "Destination",
+                "passengers": "Passengers",
+                "luggage": "Suitcases",
+                "flight": "Flight number",
+                "name": "Name",
+                "note": "Note",
+                "months": [
+                  "January",
+                  "February",
+                  "March",
+                  "April",
+                  "May",
+                  "June",
+                  "July",
+                  "August",
+                  "September",
+                  "October",
+                  "November",
+                  "December"
+                ],
+                "copied": "Message copied.",
+                "viber": "Message copied. If it does not appear in Viber, paste it in."
+              },
+              "routes": {
+                "beg": "Belgrade Airport (BEG)",
+                "osi": "Osijek Airport (OSI)",
+                "tsr": "Timișoara Airport (TSR)",
+                "bud": "Budapest Airport (BUD)",
+                "zag": "Zagreb Airport (ZAG)"
+              },
+              "contact": {
+                "whatsapp": "+381600000000",
+                "viber": "+381600000000",
+                "email": ["info", "comitrans.net"]
+              }
+            }
+          </script>
         </div>
       </section>
     </main>
