@@ -57,7 +57,7 @@
   },
   "hero": {
     "title": "Od vrata do aerodroma.",
-    "lead": "Privatni prevoz iz Novog Sada do aerodroma i nazad. Vozim vas ja, Ćomi, a u Ford Galaxy staje do šest putnika.",
+    "lead": "Privatni prevoz od vaših vrata do željene destinacije.",
     "call": "ili pozovite",
     "also": "Vozim i do aerodroma u Budimpešti, Temišvaru, Osijeku i Zagrebu.",
     "alsoLink": "Sve relacije",
@@ -174,7 +174,7 @@
   "about": {
     "title": "Ja sam Ćomi.",
     "text": [
-      "Ćomitrans sam ja i moj Galaxy. Kad zakažete vožnju, javljam se ja, dolazim ja i vozim ja.",
+      "Ćomitrans čine jedan vozač i jedan Galaxy. Na vaš poziv odgovaram lično, dolazim po vas i vozim vas do odredišta.",
       "Nema dispečera i nema iznenađenja: znate ko vas čeka i u kom autu."
     ],
     "plate": "Registarska tablica sa natpisom NS ĆOMI"
@@ -200,7 +200,7 @@
       },
       {
         "q": "Kako se plaća?",
-        "a": "Cenu dogovaramo pre vožnje, tako da na kraju nema iznenađenja."
+        "a": "Cenu dogovaramo pre vožnje, plaća se prilikom polaska."
       },
       {
         "q": "Da li vozite noću i praznicima?",
