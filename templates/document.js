@@ -95,6 +95,9 @@ export function page(context, { title, description, body, indexed = true, styles
         <meta http-equiv="Content-Security-Policy" content="${POLICY}" />
         <meta name="color-scheme" content="light" />
         <meta name="theme-color" content="#f5f6f2" />
+        <link rel="icon" href="${root}favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="${root}favicon-48.png" sizes="48x48" />
+        <link rel="apple-touch-icon" href="${root}apple-touch-icon.png" />
         <title>${title}</title>
         <meta name="description" content="${description}" />
         ${site.launched && indexed ? null : html`<meta name="robots" content="noindex" />`}
