@@ -75,6 +75,11 @@ function indexing(context) {
     <meta property="og:url" content="${url}" />
     <meta property="og:title" content="${t.meta.ogTitle}" />
     <meta property="og:description" content="${t.meta.description}" />
+    <meta property="og:image" content="${site.origin}/og-${locale.code}.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="${t.meta.ogAlt}" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:locale" content="${locale.ogLocale}" />
     ${site.locales
       .filter((other) => other !== locale)

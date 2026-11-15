@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "node tools/build.js",
+    "card": "node tools/card.js",
     "format": "prettier --write \"**/*.{js,css,html}\"",
     "format:check": "prettier --check \"**/*.{js,css,html}\"",
     "lint": "eslint .",
