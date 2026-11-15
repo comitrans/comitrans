@@ -3,14 +3,9 @@
   "origin": "https://comitrans.net",
   "launched": false,
   "todo": [
-    "contact: set up forwarding for the info@ address",
-    "routes: confirm distances and usual door-to-door times; add prices or keep them on request",
-    "airport: confirm the routine the steps describe (following flights, waiting at arrivals)",
-    "faq: confirm every answer (notice needed, nights and holidays, payment)",
     "vehicle: confirm the seat and luggage notes",
     "copy: have the Serbian text proofread by a native speaker",
-    "booking: test the Viber button on a real phone",
-    "footer: add the registered business details if they are required"
+    "booking: test the Viber button on a real phone"
   ],
   "locales": [
     {
