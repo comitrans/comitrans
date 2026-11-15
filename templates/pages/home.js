@@ -4,6 +4,7 @@ import { airport } from "../sections/airport.js";
 import { dock } from "../sections/dock.js";
 import { header, trip } from "../sections/header.js";
 import { hero } from "../sections/hero.js";
+import { routes } from "../sections/routes.js";
 
 export function home(context) {
   const { t } = context;
@@ -13,7 +14,7 @@ export function home(context) {
     body: html`
       <a class="skip" href="#main">${t.chrome.skip}</a>
       ${header(context)} ${trip(context)}
-      <main id="main">${hero(context)} ${airport(context)}</main>
+      <main id="main">${hero(context)} ${airport(context)} ${routes(context)}</main>
       ${dock(context)}
     `,
   });

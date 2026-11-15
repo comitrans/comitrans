@@ -1,0 +1,163 @@
+/* The routes are one distance sign: a destination and its kilometres on every
+   row, the way a motorway lists what lies ahead. */
+.board {
+  font-size: clamp(1.25rem, 0.95rem + 1.3vw, 1.875rem);
+}
+
+.board-sign {
+  padding: 0.5em 0.55em;
+}
+
+.board-row {
+  display: grid;
+  grid-template-columns: auto auto minmax(0, 1fr) auto;
+  grid-template-areas:
+    "icon place place km"
+    ".    code  time  price";
+  align-items: center;
+  gap: 0.25em 0.55em;
+  padding: 0.5em 0.5em 0.55em;
+  transform-origin: 50% 0;
+}
+
+.board-row + .board-row {
+  border-top: 0.06em solid rgb(255 255 255 / 0.4);
+}
+
+.board-row .pictogram {
+  grid-area: icon;
+  font-size: 1.35em;
+}
+
+.board-place {
+  grid-area: place;
+}
+
+.board-city {
+  font-size: 1.4em;
+  font-weight: 800;
+}
+
+.board-airport {
+  display: block;
+  margin-top: 0.2em;
+  font-size: 0.66em;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  opacity: 0.86;
+}
+
+.board-code {
+  grid-area: code;
+  justify-self: start;
+  padding: 0.14em 0.36em 0.18em;
+  border-radius: 0.22em;
+  background: var(--white);
+  color: var(--green);
+  font-size: 0.74em;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.board-km {
+  grid-area: km;
+  font-size: 1.7em;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.board-km small {
+  margin-left: 0.25em;
+  font-size: 0.42em;
+  font-weight: 600;
+}
+
+.board-time {
+  grid-area: time;
+  font-size: 0.78em;
+  font-weight: 600;
+}
+
+.board-time small {
+  display: block;
+  margin-top: 0.15em;
+  font-size: 0.82em;
+  font-weight: 500;
+  opacity: 0.86;
+}
+
+.board-price {
+  grid-area: price;
+  font-size: 0.78em;
+  font-weight: 600;
+  text-align: right;
+}
+
+.board-price strong {
+  font-size: 1.3em;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.board-posts {
+  display: flex;
+  justify-content: space-around;
+  height: clamp(1.75rem, 1rem + 3vw, 3.75rem);
+}
+
+.board-posts .post {
+  width: clamp(0.35rem, 0.25rem + 0.3vw, 0.55rem);
+}
+
+.routes-other {
+  font-size: var(--size-lead);
+}
+
+.routes-other a {
+  color: var(--amber);
+  font-weight: 700;
+}
+
+/* The rows turn into place one after another when the sign is first seen. */
+@media (scripting: enabled) {
+  .board:not(.is-seen) .board-row {
+    opacity: 0;
+  }
+
+  .board.is-seen .board-row {
+    animation: turn 0.6s var(--ease-arrive) both;
+  }
+
+  .board.is-seen .board-row:nth-child(2) {
+    animation-delay: 0.09s;
+  }
+
+  .board.is-seen .board-row:nth-child(3) {
+    animation-delay: 0.18s;
+  }
+
+  .board.is-seen .board-row:nth-child(4) {
+    animation-delay: 0.27s;
+  }
+
+  .board.is-seen .board-row:nth-child(n + 5) {
+    animation-delay: 0.36s;
+  }
+}
+
+@keyframes turn {
+  from {
+    opacity: 0;
+    transform: perspective(50rem) rotateX(-75deg);
+  }
+}
+
+@media (min-width: 56rem) {
+  .board-row {
+    grid-template-columns: auto minmax(8em, 1.4fr) auto 4.4em minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas: "icon place code km time price";
+    gap: 0 0.9em;
+  }
+}
