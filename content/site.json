@@ -2,9 +2,7 @@
   "brand": "Ćomitrans",
   "origin": "https://comitrans.net",
   "launched": false,
-  "todo": [
-    "booking: test the Viber button on a real phone"
-  ],
+  "todo": [],
   "locales": [
     {
       "code": "sr",
