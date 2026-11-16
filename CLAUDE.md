@@ -31,6 +31,7 @@ Guidance for AI agents working in this repo. Read [README.md](README.md) first: 
 - The sign is the one recurring component: `.sign` plus a plate modifier, sized in `em` so its font-size scales the whole plate. The plate colours follow the road-class convention the signs are borrowed from: green for the motorway (the airports), yellow for other towns, white for places in town, brown for sights, blue for services. A new sign takes one of these rather than a new colour.
 - Amber is the single accent: the primary button, the indicator, a link on asphalt. If a view already has one, a second thing does not get it.
 - A surface that is not paper sets `--focus` to a colour its focus ring shows up in.
+- Drawn decoration takes no pointer events wherever it can overlap text or controls. A positioned box paints over the in-flow copy beside it, and its transparent parts still take the click.
 - A value a script and the stylesheet both need is measured from the layout rather than written twice ([public/js/drive.js](public/js/drive.js) reads the lane marking's period this way).
 
 ### Motion

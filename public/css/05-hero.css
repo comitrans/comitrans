@@ -72,6 +72,7 @@
   height: clamp(11rem, 6rem + 21vw, 25rem);
   margin-top: 0.5rem;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .road {
