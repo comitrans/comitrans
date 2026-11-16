@@ -1,7 +1,7 @@
 {
   "brand": "Ćomitrans",
   "origin": "https://comitrans.net",
-  "launched": false,
+  "launched": true,
   "todo": [],
   "locales": [
     {
